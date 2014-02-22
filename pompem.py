@@ -39,7 +39,7 @@ def main():
             print ("+"+"-" * 150+"+")
             for listDictResults in listResults:
                 for dictResults in listDictResults:
-                    print("+ {0} | {1} | {2} | {3}| ".format(dictResults["Date"], str(dictResults["Description"])[0:30], dictResults["Download"], str(dictResults["Author"])[0:20]))
+                    print("+ {0} | {1} | {2} | {3}| ".format(dictResults["Date"], str(dictResults["Description"])[0:40], dictResults["Download"], str(dictResults["Author"])[0:20]))
     else:
         print(parser.get_usage())
 

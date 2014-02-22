@@ -22,3 +22,14 @@ class DownloadPage(object):
         except Exception, e:
             print (e.message)
             return None
+
+        def getUrlPageDownload(self, host, parametros):
+            try:
+                headers = {'User-Agent': 'Googlebot '}
+
+                r = requests.get(host, params=parametros, headers=headers)
+
+                return r.url()
+            except Exception, e:
+                print (e.message)
+                return None
