@@ -2,6 +2,7 @@
 
 import requests
 import sys
+import re
 from BeautifulSoup import BeautifulStoneSoup
 sys.path.insert(0, '..')
 
@@ -10,9 +11,9 @@ class DownloadPage(object):
     def __init__(self, url=None):
         self.url = url
 
-    def getDownloadPage(self, host, parametros):
+    def getDownloadPage(self, host=None, parametros=None):
         try:
-            headers = {'User-Agent': 'Googlebot '}
+            headers = {'User-Agent': 'Googlebot/2.1 (+http://www.googlebot.com/bot.html) '}
 
             r = requests.get(host, params=parametros, headers=headers)
 
@@ -23,13 +24,15 @@ class DownloadPage(object):
             print (e.message)
             return None
 
-        def getUrlPageDownload(self, host, parametros):
-            try:
-                headers = {'User-Agent': 'Googlebot '}
 
-                r = requests.get(host, params=parametros, headers=headers)
+    def postDownloadPagePacketStorm(self, host=None, postData={}):
+        headers = {'User-Agent': 'Googlebot/2.1 (+http://www.googlebot.com/bot.html) '}
+        s = requests.session()
+        s.post(host, headers=headers, data={"agree":"OK"})
+        r = s.post(host,headers=headers, data=postData)
 
-                return r.url()
-            except Exception, e:
-                print (e.message)
-                return None
+
+        decodedstring = BeautifulStoneSoup(r.text,
+                                              convertEntities=BeautifulStoneSoup.HTML_ENTITIES)
+
+        return decodedstring

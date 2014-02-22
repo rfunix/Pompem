@@ -2,6 +2,7 @@
 import sys
 from Bots.Exploitdb import ExploitDB
 from Bots.PacketStorm import PacketStorm
+from Bots.Day import BotDay
 from threading import Thread
 sys.path.insert(0, '..')
 
@@ -24,7 +25,12 @@ class Router(object):
                         th2 = Thread(target=self.addBotPacketStorm, args=(word,))
                         th2.start()
                         th2.join()
+                        th3 = Thread(target=self.addBotDay, args=(word,))
+                        th3.start()
+                        th3.join()
+
                         self.dictAllResults[word] = self.listWordResults
+
                 return self.dictAllResults
             except Exception, ex:
                 pass
@@ -39,3 +45,9 @@ class Router(object):
         exploitDB = ExploitDB()
         exploitDB.filter_description = str(word).strip("\n")
         self.listWordResults.append(exploitDB.botSearch())
+
+    def addBotDay(self, word):
+        day = BotDay()
+        day.filter_description = str(word).strip("\n")
+        self.listWordResults.append(day.botSearch())
+

@@ -28,6 +28,7 @@ def main():
     if(listWords):
         listWords = str(listWords).split(",")
     if listWords:
+        print ("+ Searching Exploits ...")
         router = Router()
         router.words = listWords
         dictAllResults = router.searchInBots()
