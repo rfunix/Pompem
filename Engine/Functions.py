@@ -25,7 +25,7 @@ class DownloadPage(object):
             return None
 
 
-    def postDownloadPagePacketStorm(self, host=None, postData={}):
+    def postDownloadPageDay(self, host=None, postData={}):
         headers = {'User-Agent': 'Googlebot/2.1 (+http://www.googlebot.com/bot.html) '}
         s = requests.session()
         s.post(host, headers=headers, data={"agree":"OK"})

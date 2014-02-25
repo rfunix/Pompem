@@ -2,7 +2,6 @@
 
 import sys
 sys.path.insert(0, '..')
-
 import optparse
 from Engine.Router import Router
 from Engine.Update import UpdateVersion
@@ -33,7 +32,7 @@ def main():
     #listWords = "wordpress,joomla"
     if (update):
         u = UpdateVersion()
-        u.update()
+        u.update() #Update from github
         return
     if(listWords):
         listWords = str(listWords).split(",")
@@ -43,14 +42,20 @@ def main():
         router.words = listWords
         dictAllResults = router.searchInBots()
         for wordSearch, listResults in dictAllResults.items():
+            countPrint = 0
             print ("+"+"-" * 150+"+")
             print ("+Results {0}".format(wordSearch))
             print ("+"+"-" * 150+"+")
             print ("+Date            Description                                     Download                                       Author")
             print ("+"+"-" * 150+"+")
             for listDictResults in listResults:
+                if (countPrint > 5):
+                    break
                 for dictResults in listDictResults:
-                    print("+ {0} | {1} | {2} | {3}| ".format(dictResults["Date"], str(dictResults["Description"])[0:40], dictResults["Download"], str(dictResults["Author"])[0:20]))
+                    if (countPrint > 5):
+                        break
+                    countPrint +=1
+                    print("+ {0} | {1} | {2} | {3} ".format(dictResults["Date"], str(dictResults["Description"])[0:40], dictResults["Download"], str(dictResults["Author"])[0:20]))
     else:
         print(parser.get_usage())
 

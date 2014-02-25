@@ -18,7 +18,7 @@ class BotDay:
         url = "http://1337day.com/search"
         data = {"dong": "{0}".format(self.filter_description), "submit_search": "Submit"}
         try:
-            pagehtml = d.postDownloadPagePacketStorm(url, data)
+            pagehtml = d.postDownloadPageDay(url, data)
             if (pagehtml):
                 self.extractData(pagehtml)
         except Exception, ex:
