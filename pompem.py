@@ -49,7 +49,7 @@ def main():
             print ("+Date            Description                                     Download                                       Author")
             print ("+"+"-" * 150+"+")
             for listDictResults in listResults:
-                if (countPrint > 5):
+                if (countPrint > 10):
                     break
                 for dictResults in listDictResults:
                     if (countPrint > 5):
