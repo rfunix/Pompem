@@ -15,7 +15,7 @@ class PacketStorm:
     def botSearch(self):
         d = DownloadPage()
         self.results = []
-        for i in range(10):
+        for i in range(5):
             url = "http://packetstormsecurity.com/search/files/page{0}/".format(i)
             parameters = {"q": "{0}".format(self.filter_description)}
             try:
