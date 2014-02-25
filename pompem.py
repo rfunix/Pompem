@@ -52,7 +52,7 @@ def main():
                 if (countPrint > 10):
                     break
                 for dictResults in listDictResults:
-                    if (countPrint > 5):
+                    if (countPrint > 10):
                         break
                     countPrint +=1
                     print("+ {0} | {1} | {2} | {3} ".format(dictResults["Date"], str(dictResults["Description"])[0:40], dictResults["Download"], str(dictResults["Author"])[0:20]))
