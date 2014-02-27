@@ -22,12 +22,15 @@ class Router(object):
                         th1 = Thread(target=self.addBotExploitDB, args=(word,))
                         th1.start()
                         th1.join()
+                        #self.addBotExploitDB(word)
                         th2 = Thread(target=self.addBotPacketStorm, args=(word,))
                         th2.start()
                         th2.join()
+                        #self.addBotPacketStorm(word)
                         th3 = Thread(target=self.addBotDay, args=(word,))
                         th3.start()
                         th3.join()
+                        #self.addBotDay(word)
 
                         self.dictAllResults[word] = self.listWordResults
 

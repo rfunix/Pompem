@@ -26,24 +26,27 @@ class PacketStorm:
                 pass
         return self.results
 
-
-
     def extractData(self, html):
         result = Result()
-        html = re.sub(r"\n", " ", html)
         html = re.sub(r"\"", "'", html)
-        r = re.compile(r"<dl id='[^']*' class='[^']*?'>.*?"
+        r = re.search(r"(?ms)<form action='/search/' method='get'.*?<div id='nv'", html)
+        html = r.group()
+        html = re.sub(r"\n", " ", html)
+
+        r2 = re.compile(r"<dl id='[^']*' class='[^']*?'>.*?"
                         "title='[^']*?'>(?P<Description>[^<]*?)<.*?"
                         "href='.*?(?P<Date>\d{4}-\d{2}-\d{2}).*?"
                         "'person'>(?P<Author>[^<]*?)</a>.*?"
                         "/files/tags/exploit.*?"
                         "act-links'><a href='(?P<Download>[^']*?)'")
+
+        r = re.compile("<dl.*?</dl>")
         for match in r.finditer(html):
-            if match:
-                self.results.append(match.groupdict())
+            match2 = r2.search(match.group())
+            if match2:
+                self.results.append(match2.groupdict())
                 self.results[len(self.results) -1]['Download'] = \
                     "http://packetstormsecurity.com{0}".format(self.results[len(self.results) -1]['Download'])
-
 
 
 

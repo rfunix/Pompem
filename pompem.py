@@ -29,7 +29,7 @@ def main():
     fileTextName = options.fileText
     fileHtmlName = options.fileHtml
     update = options.update
-    #listWords = "wordpress,joomla"
+    #listWords = "ssh"
     if (update):
         u = UpdateVersion()
         u.update() #Update from github
@@ -51,7 +51,7 @@ def main():
             for listDictResults in listResults:
                 countPrint = 0
                 for dictResults in listDictResults:
-                    if (countPrint > 8):
+                    if (countPrint > 15):
                         break
                     countPrint +=1
                     print("+ {0} | {1} | {2} | {3} ".format(dictResults["Date"], str(dictResults["Description"])[0:40], dictResults["Download"], str(dictResults["Author"])[0:20]))
