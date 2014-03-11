@@ -7,3 +7,16 @@ In its current version, performs searches in databases: Exploit-db, Packstrom, 1
 
 Screenshots
 ----
+
+
+Installation
+----
+
+You can download the latest tarball by clicking [here](https://github.com/rfunix/Pompem/tarball/master) or latest zipball by clicking  [here](https://github.com/rfunix/Pompem/zipball/master).
+
+Preferably, you can download sqlmap by cloning the [Git](https://github.com/rfunix/Pompem) repository:
+
+    git clone https://github.com/rfunix/Pompem.git Pompem-dev
+
+Pompem works out of the box with [Python](http://www.python.org/download/) version '''2.6.x''' and '''2.7.x''' on any platform.
+
