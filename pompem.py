@@ -3,12 +3,13 @@
 import sys
 sys.path.insert(0, '..')
 import optparse
-from Engine.Router import Router
 from Engine.Update import UpdateVersion
+from Engine.ExecAndPrint import execute
+
 
 def main():
     parser = optparse.OptionParser("%prog " + \
-                                   "-s/--search <word,word,word...> --txt <Save Text File> --html <Save Html File>")
+                                   "-s --search <word,word,word...> --txt <Save Text File> --html <Save Html File>")
 
     parser.add_option("-s", "--search", dest="listWords", type="string",
                                         help="enter text to search",)
@@ -37,24 +38,7 @@ def main():
     if(listWords):
         listWords = str(listWords).split(",")
     if listWords:
-        print ("+ Searching Exploits ...")
-        router = Router()
-        router.words = listWords
-        dictAllResults = router.searchInBots()
-        for wordSearch, listResults in dictAllResults.items():
-            countPrint = 0
-            print ("+"+"-" * 150+"+")
-            print ("+Results {0}".format(wordSearch))
-            print ("+"+"-" * 150+"+")
-            print ("+Date            Description                                     Download                                       Author")
-            print ("+"+"-" * 150+"+")
-            for listDictResults in listResults:
-                countPrint = 0
-                for dictResults in listDictResults:
-                    if (countPrint > 15):
-                        break
-                    countPrint +=1
-                    print("+ {0} | {1} | {2} | {3} ".format(dictResults["Date"], str(dictResults["Description"])[0:40], dictResults["Download"], str(dictResults["Author"])[0:20]))
+        execute(listWords)
     else:
         print(parser.get_usage())
 
