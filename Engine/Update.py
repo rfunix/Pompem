@@ -14,7 +14,7 @@ class UpdateVersion():
     def update(self):
         if not os.path.dirname(os.path.abspath(__file__)):
             print("not a git repository. Please checkout the 'rfunix/Pompem' repository")
-            print("from GitHub (e.g. git clone https://github.com/rfunix/Pompem.git")
+            print("from GitHub (e.g. git clone https://github.com/rfunix/Pompem.git Pompem-dev")
         else:
             print ("updating Pompem to the latest development version from the GitHub repository")
             print ("[%s] [INFO] update in progress " % time.strftime("%X"))
