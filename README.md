@@ -33,4 +33,4 @@ Examples of use:
     python pompem.py -s Wordpress --txt output.txt
     python pompem.py -s Joomla --html output.html
     python pompem.py -s ssh,ftp,telnet
-
+    python pompem.py --update
