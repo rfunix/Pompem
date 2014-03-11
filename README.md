@@ -20,3 +20,19 @@ Preferably, you can download sqlmap by cloning the [Git](https://github.com/rfun
 
 Pompem works out of the box with [Python](http://www.python.org/download/) version '''2.6.x''' and '''2.7.x''' on any platform.
 
+
+Usage
+----
+
+To get the list of basic options and information about the project:
+
+    python pompem.py -h
+    
+Examples of use:
+
+    python pompem.py -s Wordpress --txt output.txt
+    python pompem.py -s Joomla --html output.html
+    python pompem.py -s ssh,ftp,telnet
+
+
+
