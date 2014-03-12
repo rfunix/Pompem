@@ -66,7 +66,7 @@ def basicInfo():
               Usage: pompem.py [-s/--search <keyword,keyword,keyword,...>]
                                [--txt <Save Text File>]
                                [--html <Save HTML File>]
-      \n         More and Help, use: -h\--help
+      \n           More and Help, use: -h\--help
               """
 
 if __name__ == "__main__":
