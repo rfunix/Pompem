@@ -27,6 +27,7 @@ def main():
                       action="store_true", dest="help", help="-h")
     (options, args) = parser.parse_args()
 
+    argsParameters = {}
     keywords = options.keywords
     fileTextName = options.fileText
     fileHtmlName = options.fileHtml
@@ -41,9 +42,15 @@ def main():
         u.update() #Update from github
         return
     if(keywords):
+        if fileTextName:
+            argsParameters["fileTextName"] = fileTextName
+        if fileHtmlName:
+            argsParameters["fileHtmlName"] = fileHtmlName
         keywordsformated = str(keywords).split(",")
         if keywordsformated:
-            execute(keywordsformated, keywords)
+            argsParameters["keywordsformated"] = keywordsformated
+            argsParameters["keywords"] = keywords
+            execute(**argsParameters)
     else:
         basicInfo()
         return
