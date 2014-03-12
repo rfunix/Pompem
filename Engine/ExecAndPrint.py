@@ -1,13 +1,17 @@
 # -*- coding: UTF-8 -*-
 
 from Engine.Router import Router
+import sys
 
-def execute(listWords):
-    print ("+ Searching Exploits ...")
+def execute(listWords, keywords):
+    print ("+ Searching Exploits for {0}...".format(keywords))
     router = Router()
     router.words = listWords
     dictAllResults = router.searchInBots()
     for wordSearch, listResults in dictAllResults.items():
+        if (not listResults[0]):
+            print("\nWas no result found for {0}".format(wordSearch))
+            continue
         countPrint = 0
         print ("+"+"-" * 150+"+")
         print ("+Results {0}".format(wordSearch))
@@ -24,4 +28,3 @@ def execute(listWords):
                         str(dictResults["Description"])[0:40],
                         dictResults["Download"], str(dictResults["Author"])[0:20]))
                 print ("+"+"-" * 150+"+")
-        

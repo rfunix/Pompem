@@ -3,7 +3,8 @@ import sys
 from Bots.Exploitdb import ExploitDB
 from Bots.PacketStorm import PacketStorm
 from Bots.Day import BotDay
-from threading import Thread
+from threading import Thread, Timer
+
 sys.path.insert(0, '..')
 
 class Router(object):
@@ -31,9 +32,7 @@ class Router(object):
                         th3.start()
                         th3.join()
                         #self.addBotDay(word)
-
                         self.dictAllResults[word] = self.listWordResults
-
                 return self.dictAllResults
             except Exception, ex:
                 pass
