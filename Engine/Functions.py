@@ -111,6 +111,7 @@ def WriteHtml(dictAllResults):
                 <table class="table colorFonts">
                     <thead>
                         <tr>
+                            <td></td>
                             <th>Date </th>
                             <th>Description</th>
                             <th>Download</th>
@@ -125,6 +126,7 @@ def WriteHtml(dictAllResults):
             for dictResults in listDictResults:
                 f.write(r'''
                 <tr>
+                  <td></td>
                   <td>{0}</td>
                   <td>{1}</td>
                   <td><a class="colorFonts" href="{2}">{2}</a></td>

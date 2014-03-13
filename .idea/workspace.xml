@@ -39,11 +39,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ExecAndPrint.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="ExecAndPrint.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Engine/ExecAndPrint.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="32" selection-start="57" selection-end="57" vertical-scroll-proportion="0.055555556" vertical-offset="0" max-vertical-offset="915">
-              <folding />
+            <state line="17" column="22" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="915">
+              <folding>
+                <element signature="e#25#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,11 +59,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Functions.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Functions.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Engine/Functions.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="10" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2370">
-              <folding />
+            <state line="122" column="32" selection-start="3809" selection-end="3809" vertical-scroll-proportion="0.8055556" vertical-offset="1395" max-vertical-offset="2400">
+              <folding>
+                <element signature="e#25#40#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -138,8 +142,8 @@
         <option value="$PROJECT_DIR$/test.html" />
         <option value="$PROJECT_DIR$/pompem.py" />
         <option value="$PROJECT_DIR$/Engine/Router.py" />
-        <option value="$PROJECT_DIR$/Engine/Functions.py" />
         <option value="$PROJECT_DIR$/Engine/ExecAndPrint.py" />
+        <option value="$PROJECT_DIR$/Engine/Functions.py" />
       </list>
     </option>
   </component>
@@ -703,13 +707,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Engine/Functions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="10" selection-start="51" selection-end="51" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2370">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Bots/Day.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="38" column="16" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
@@ -742,8 +739,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Engine/ExecAndPrint.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="32" selection-start="57" selection-end="57" vertical-scroll-proportion="0.055555556" vertical-offset="0" max-vertical-offset="915">
-          <folding />
+        <state line="17" column="22" selection-start="567" selection-end="567" vertical-scroll-proportion="0.0" vertical-offset="375" max-vertical-offset="915">
+          <folding>
+            <element signature="e#25#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Engine/Functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="122" column="32" selection-start="3809" selection-end="3809" vertical-scroll-proportion="0.8055556" vertical-offset="1395" max-vertical-offset="2400">
+          <folding>
+            <element signature="e#25#40#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
