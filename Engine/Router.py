@@ -3,7 +3,7 @@ import sys
 from Bots.Exploitdb import ExploitDB
 from Bots.PacketStorm import PacketStorm
 from Bots.Day import BotDay
-from threading import Thread, Timer
+from threading import Thread
 
 sys.path.insert(0, '..')
 

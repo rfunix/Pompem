@@ -13,10 +13,10 @@ def main():
     parser.add_option("-s", "--search", dest="keywords", type="string",
                                         help="text for search",)
 
-    parser.add_option("--txt", dest="fileText", type="string", \
-                      help="enter the file name",)
+    parser.add_option("--txt", dest="fileText", \
+                      action="store_true", help="enter the file name",)
 
-    parser.add_option("--html", dest="fileHtml", type="string", \
+    parser.add_option("--html", dest="fileHtml", action="store_true", \
                       help="enter the file name",)
 
     parser.add_option("--update",
@@ -29,8 +29,8 @@ def main():
 
     argsParameters = {}
     keywords = options.keywords
-    fileTextName = options.fileText
-    fileHtmlName = options.fileHtml
+    fileText = options.fileText
+    fileHtml = options.fileHtml
     update = options.update
     help = options.help
     if help:
@@ -42,10 +42,10 @@ def main():
         u.update() #Update from github
         return
     if(keywords):
-        if fileTextName:
-            argsParameters["fileTextName"] = fileTextName
-        if fileHtmlName:
-            argsParameters["fileHtmlName"] = fileHtmlName
+        if fileText:
+            argsParameters["fileText"] = fileText
+        if fileHtml:
+            argsParameters["fileHtml"] = fileHtml
         keywordsformated = str(keywords).split(",")
         if keywordsformated:
             argsParameters["keywordsformated"] = keywordsformated
@@ -60,8 +60,8 @@ def printHelpMessage():
 Options:
   -h, --help                      show this help message and exit
   -s, --search <keyword,keyword,keyword>  text for search
-  --txt=FILETEXT                  enter the file name
-  --html=FILEHTML                 enter the file name
+  --txt                           Write txt File
+  --html                          Write html File
   --update                        upgrade to latest version
               """
 
@@ -71,8 +71,8 @@ def basicInfo():
               \n    Rafael Francischini (Programmer and Ethical Hacker) - @twitter\n
     Bruno Fraga (Security Researcher) - @brunofraga_net\n
               Usage: pompem.py [-s/--search <keyword,keyword,keyword,...>]
-                               [--txt <Save Text File>]
-                               [--html <Save HTML File>]
+                               [--txt Write txt file  ]
+                               [--html Write html file]
       \n              Get basic options and Help, use: -h\--help
               """
 

@@ -1,29 +1,46 @@
 # -*- coding: UTF-8 -*-
 
 from Engine.Router import Router
-import sys
+from Engine.Functions import WriteHtml,WriteTxt
+import webbrowser
 
 def execute(**kwargs):
     print ("+ Searching Exploits for {0}...".format(kwargs["keywords"]))
     router = Router()
     router.words = kwargs["keywordsformated"]
     dictAllResults = router.searchInBots()
-    if (dict(kwargs).has_key("fileTextName")):
+
+    if (dict(kwargs).has_key("fileText")):
         try:
-            createTxt(dictAllResults, kwargs["fileTextName"])
-            print("Your results will be saved in txt - {0}".format(kwargs["fileTextName"]))
+            WriteTxt(dictAllResults)
+            print("Your results will be saved in txt - out.txt")
+            if(not dict(kwargs).has_key("fileHtml")):
+                return
+        except Exception, ex:
+            print "ERROR -> {0}".format(ex.message)
+
+    if (dict(kwargs).has_key("fileHtml")):
+        try:
+            WriteHtml(dictAllResults)
+            print("Your results will be saved in html - out.html")
+            new = 2
+            url = "out.html"
+            webbrowser.open(url,new=new)
             return
         except Exception, ex:
             print "ERROR -> {0}".format(ex.message)
+
     for wordSearch, listResults in dictAllResults.items():
         if (not listResults[0]):
             print("\nWas no result found for {0}".format(wordSearch))
             continue
+
         countPrint = 0
         print ("+Results {0}".format(wordSearch))
         print ("+"+"-" * 150+"+")
         print ("+Date            Description                                     Download                                       Author")
         print ("+"+"-" * 150+"+")
+
         for listDictResults in listResults:
             countPrint = 0
             for dictResults in listDictResults:
@@ -36,20 +53,3 @@ def execute(**kwargs):
                 print ("+"+"-" * 150+"+")
 
 
-def createTxt(dictAllResults, filename):
-    f = open(filename, "w")
-    for wordSearch, listResults in dictAllResults.items():
-        if (not listResults[0]):
-            continue
-        f.write("+"+"-" * 150+"+\n")
-        f.write("+Results {0}\n".format(wordSearch))
-        f.write("+"+"-" * 150+"+\n")
-        f.write("+Date            Description                                     Download                                       Author\n")
-        f.write("+"+"-" * 150+"+\n")
-        for listDictResults in listResults:
-            for dictResults in listDictResults:
-                f.write("+ {0} | {1} | {2} | {3} \n".format(dictResults["Date"],
-                        str(dictResults["Description"]),
-                        dictResults["Download"], str(dictResults["Author"])))
-                f.write("+"+"-" * 150+"+\n")
-    f.close()
