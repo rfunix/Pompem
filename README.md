@@ -30,7 +30,8 @@ To get the list of basic options and information about the project:
     
 Examples of use:
 
-    python pompem.py -s Wordpress --txt output.txt
-    python pompem.py -s Joomla --html output.html
+    python pompem.py -s Wordpress --txt 
+    python pompem.py -s Joomla --html
+    python pompem.py -s "joomla,wordpress" --html --txt
     python pompem.py -s ssh,ftp,telnet
     python pompem.py --update
