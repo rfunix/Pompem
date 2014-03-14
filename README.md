@@ -14,7 +14,7 @@ Installation
 
 You can download the latest tarball by clicking [here](https://github.com/rfunix/Pompem/tarball/master) or latest zipball by clicking  [here](https://github.com/rfunix/Pompem/zipball/master).
 
-Preferably, you can download sqlmap by cloning the [Git](https://github.com/rfunix/Pompem) repository:
+Preferably, you can download pompem by cloning the [Git](https://github.com/rfunix/Pompem) repository:
 
     git clone https://github.com/rfunix/Pompem.git Pompem-dev
 
