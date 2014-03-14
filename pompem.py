@@ -68,7 +68,7 @@ Options:
 def basicInfo():
      print """
             Pompem - Exploit Finder  |  Developed by Relax Lab
-              \n    Rafael Francischini (Programmer and Ethical Hacker) - @twitter\n
+              \n    Rafael Francischini (Programmer and Ethical Hacker) - @rfunix\n
     Bruno Fraga (Security Researcher) - @brunofraga_net\n
               Usage: pompem.py [-s/--search <keyword,keyword,keyword,...>]
                                [--txt Write txt file  ]
