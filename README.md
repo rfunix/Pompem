@@ -23,6 +23,7 @@ Pompem works out of the box with [Python](http://www.python.org/download/) versi
 Pompem lib uses the following setup: 
 
 BeautifulSoup => http://www.crummy.com/software/BeautifulSoup/ 
+
 Requests => http://docs.python-requests.org/en/latest/ 
 
 If you have not realized the Download.
