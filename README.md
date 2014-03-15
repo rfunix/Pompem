@@ -20,6 +20,13 @@ Preferably, you can download pompem by cloning the [Git](https://github.com/rfun
 
 Pompem works out of the box with [Python](http://www.python.org/download/) version '''2.6.x''' and '''2.7.x''' on any platform.
 
+Pompem lib uses the following setup: 
+
+BeautifulSoup => http://www.crummy.com/software/BeautifulSoup/ 
+Requests => http://docs.python-requests.org/en/latest/ 
+
+If you have not realized the Download.
+
 
 Usage
 ----
