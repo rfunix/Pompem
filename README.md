@@ -42,4 +42,4 @@ Examples of use:
     python pompem.py -s Joomla --html
     python pompem.py -s "joomla,wordpress" --html --txt
     python pompem.py -s ssh,ftp,mysql
-    python pompem.py --update
+    python pompem.py --update 
