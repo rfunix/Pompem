@@ -1,1 +1,4 @@
+bin
+include
+lib
 *.pyc
