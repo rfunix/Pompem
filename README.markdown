@@ -45,8 +45,9 @@ python pompem.py -h
 
 Examples of use:
 
-    python pompem.py -s Wordpress --txt
+    python pompem.py -s Wordpress
     python pompem.py -s Joomla --html
-    python pompem.py -s "Internet Explorer,joomla,wordpress" --html --txt
+    python pompem.py -s "Internet Explorer,joomla,wordpress" --html
+    python pompem.py -s FortiGate --txt
     python pompem.py -s ssh,ftp,mysql
     python pompem.py --update
