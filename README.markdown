@@ -51,3 +51,10 @@ Examples of use:
     python pompem.py -s FortiGate --txt
     python pompem.py -s ssh,ftp,mysql
     python pompem.py --update
+    
+
+## License
+
+Pompem is program is free software; you may redistribute and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; Version 2 with the clarifications and exceptions described in the license file. This guarantees your right to use, modify, and redistribute this software under certain conditions. If you wish to embed Pompem technology into proprietary software, we sell alternative licenses (contact officer@brunofraga.net). 
+
+Pompem is free software, keeping the picture can USE AND ABUSE 
