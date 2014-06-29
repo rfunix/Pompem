@@ -1,8 +1,9 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
 import sys
 from Bots.Exploitdb import ExploitDB
 from Bots.PacketStorm import PacketStorm
 from Bots.Day import BotDay
+from Bots.SecurityVulns import SecurityVulns
 from threading import Thread
 
 sys.path.insert(0, '..')
@@ -13,7 +14,6 @@ class Router(object):
         self.listWordResults =listWordResults
         self.words = words
 
-
     def searchInBots(self):
         if self.words:
             try:
@@ -23,15 +23,15 @@ class Router(object):
                         th1 = Thread(target=self.addBotExploitDB, args=(word,))
                         th1.start()
                         th1.join()
-                        #self.addBotExploitDB(word)
                         th2 = Thread(target=self.addBotPacketStorm, args=(word,))
                         th2.start()
                         th2.join()
-                        #self.addBotPacketStorm(word)
                         th3 = Thread(target=self.addBotDay, args=(word,))
                         th3.start()
                         th3.join()
-                        #self.addBotDay(word)
+                        th4 = Thread(target=self.addSecurityVulns, args=(word,))
+                        th4.start()
+                        th4.join()
                         self.dictAllResults[word] = self.listWordResults
                 return self.dictAllResults
             except Exception, ex:
@@ -53,3 +53,7 @@ class Router(object):
         day.filter_description = str(word).strip("\n")
         self.listWordResults.append(day.botSearch())
 
+    def addSecurityVulns(self, word):
+        sec = SecurityVulns()
+        sec.filter_description = str(word).strip("\n")
+        self.listWordResults.append(sec.botSearch())

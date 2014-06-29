@@ -1,4 +1,4 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
 import sys
 sys.path.insert(0, '..')
 from Engine.Functions import DownloadPage
@@ -8,7 +8,7 @@ import re
 
 
 class PacketStorm:
-    def __init__(self, filter_description=None, results=[]):
+    def __init__(self, filter_description=None, results=[],):
         self.filter_description = filter_description
         self.results = results
 

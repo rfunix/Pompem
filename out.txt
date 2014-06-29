@@ -1,0 +1,337 @@
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++Results ssl
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++Date            Description                                     Download                                       Author
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-05-19 | Bypassing SSL Pinning on Android via Reverse Engineering | http://www.exploit-db.com/wp-content/themes/exploit/docs/33430.pdf | Denis Andzakovic 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-05-02 | Apache Struts ClassLoader Manipulation Remote Code Execution | http://www.exploit-db.com/download/33142 | metasploit 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-24 | Heartbleed OpenSSL - Information Leak Exploit (2) - DTLS Support | http://www.exploit-db.com/download/32998 | Ayman Sagy 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-10 | Heartbleed OpenSSL - Information Leak Exploit (1) | http://www.exploit-db.com/download/32791 | prdelka 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-09 | OpenSSL 1.0.1f TLS Heartbeat Extension - Memory Disclosure (Multiple SSL/TLS versions) | http://www.exploit-db.com/download/32764 | Fitzl Csaba 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-08 | OpenSSL TLS Heartbeat Extension - Memory Disclosure | http://www.exploit-db.com/download/32745 | Jared Stafford 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2013-12-17 | PHP openssl_x509_parse() - Memory Corruption Vulnerability | http://www.exploit-db.com/download/30395 | Stefan Esser 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2013-07-01 | Barracuda SSL VPN 680Vx 2.3.3.193 - Multiple Script Injection Vulnerabilities | http://www.exploit-db.com/download/26527 | LiquidWorm 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-12-03 | FirePass SSL VPN Unauthenticated Local File Inclusion | http://www.exploit-db.com/download/23111 | SEC Consult 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-07-20 | PHP 6.0 openssl_verify() Local Buffer Overflow PoC | http://www.exploit-db.com/download/19963 | Yakir Wizman 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-06-04 | Sysax &lt;= 5.60 Create SSL Certificate Buffer Overflow | http://www.exploit-db.com/download/18981 | Craig Freyman 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-04-19 | OpenSSL ASN1 BIO Memory Corruption Vulnerability | http://www.exploit-db.com/download/18756 | Tavis Ormandy 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2011-11-16 | SonicWALL Aventail SSL-VPN SQL Injection Vulnerability | http://www.exploit-db.com/download/18122 | Asheesh kumar 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2011-06-08 | Linux/x86-32 - ConnectBack with SSL connection - 422 bytes | http://www.exploit-db.com/download/17371 | Jonathan Salwan 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2011-03-16 | Sun Java Applet2ClassLoader - Remote Code Execution Exploit | http://www.exploit-db.com/download/16990 | metasploit 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-11-01 | Hijacking Web 2.0 Sites with SSLstrip—Hands-on Training | http://www.exploit-db.com/wp-content/themes/exploit/docs/15377.pdf | Sam Bowne 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-08-19 | SonicWALL E-Class SSL-VPN ActiveX Control Format String Overflow | http://www.exploit-db.com/download/14687 | Nikolas Sotiriu 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-07-08 | Qt 4.6.3 'QSslSocketBackendPrivate::transmit()' Denial of Service | http://www.exploit-db.com/download/14268 | Luigi Auriemma 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-06-03 | [Italian] SSH/SSL MITM | http://www.exploit-db.com/download/13727 | syslib 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-05-09 | Juniper SSL-VPN IVE JuniperSetupDLL.dll ActiveX Control Buffer Overflow | http://www.exploit-db.com/download/16568 | metasploit 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-05-19 | Bypassing SSL Pinning on Android via Reverse Engineering | http://www.exploit-db.com/wp-content/themes/exploit/docs/33430.pdf | Denis Andzakovic 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-05-02 | Apache Struts ClassLoader Manipulation Remote Code Execution | http://www.exploit-db.com/download/33142 | metasploit 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-24 | Heartbleed OpenSSL - Information Leak Exploit (2) - DTLS Support | http://www.exploit-db.com/download/32998 | Ayman Sagy 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-10 | Heartbleed OpenSSL - Information Leak Exploit (1) | http://www.exploit-db.com/download/32791 | prdelka 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-09 | OpenSSL 1.0.1f TLS Heartbeat Extension - Memory Disclosure (Multiple SSL/TLS versions) | http://www.exploit-db.com/download/32764 | Fitzl Csaba 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-08 | OpenSSL TLS Heartbeat Extension - Memory Disclosure | http://www.exploit-db.com/download/32745 | Jared Stafford 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2013-12-17 | PHP openssl_x509_parse() - Memory Corruption Vulnerability | http://www.exploit-db.com/download/30395 | Stefan Esser 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2013-07-01 | Barracuda SSL VPN 680Vx 2.3.3.193 - Multiple Script Injection Vulnerabilities | http://www.exploit-db.com/download/26527 | LiquidWorm 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-12-03 | FirePass SSL VPN Unauthenticated Local File Inclusion | http://www.exploit-db.com/download/23111 | SEC Consult 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-07-20 | PHP 6.0 openssl_verify() Local Buffer Overflow PoC | http://www.exploit-db.com/download/19963 | Yakir Wizman 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-06-04 | Sysax &lt;= 5.60 Create SSL Certificate Buffer Overflow | http://www.exploit-db.com/download/18981 | Craig Freyman 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-04-19 | OpenSSL ASN1 BIO Memory Corruption Vulnerability | http://www.exploit-db.com/download/18756 | Tavis Ormandy 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2011-11-16 | SonicWALL Aventail SSL-VPN SQL Injection Vulnerability | http://www.exploit-db.com/download/18122 | Asheesh kumar 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2011-06-08 | Linux/x86-32 - ConnectBack with SSL connection - 422 bytes | http://www.exploit-db.com/download/17371 | Jonathan Salwan 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2011-03-16 | Sun Java Applet2ClassLoader - Remote Code Execution Exploit | http://www.exploit-db.com/download/16990 | metasploit 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-11-01 | Hijacking Web 2.0 Sites with SSLstrip—Hands-on Training | http://www.exploit-db.com/wp-content/themes/exploit/docs/15377.pdf | Sam Bowne 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-08-19 | SonicWALL E-Class SSL-VPN ActiveX Control Format String Overflow | http://www.exploit-db.com/download/14687 | Nikolas Sotiriu 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-07-08 | Qt 4.6.3 'QSslSocketBackendPrivate::transmit()' Denial of Service | http://www.exploit-db.com/download/14268 | Luigi Auriemma 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-06-03 | [Italian] SSH/SSL MITM | http://www.exploit-db.com/download/13727 | syslib 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-05-09 | Juniper SSL-VPN IVE JuniperSetupDLL.dll ActiveX Control Buffer Overflow | http://www.exploit-db.com/download/16568 | metasploit 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-05-09 | SonicWall SSL-VPN NetExtender ActiveX Control Buffer Overflow | http://www.exploit-db.com/download/16616 | metasploit 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-05-09 | MySQL yaSSL SSL Hello Message Buffer Overflow | http://www.exploit-db.com/download/16701 | metasploit 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-05-09 | MySQL yaSSL SSL Hello Message Buffer Overflow | http://www.exploit-db.com/download/16849 | metasploit 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-04-30 | MySQL yaSSL CertDecoder::GetName Buffer Overflow | http://www.exploit-db.com/download/16850 | metasploit 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-04-22 | OpenSSL - Remote DoS | http://www.exploit-db.com/download/12334 | Andi 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-02-18 | PortWise SSL VPN 4.6 'reloadFrame' Parameter Cross Site Scripting Vulnerability | http://www.exploit-db.com/download/33653 | George Christopoulos 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-01-15 | Zeus Web Server 4.x 'SSL2_CLIENT_HELLO' Remote Buffer Overflow Vulnerability | http://www.exploit-db.com/download/33531 | Intevydis 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-01-11 | SSL Sniffing | http://www.exploit-db.com/wp-content/themes/exploit/docs/11114.pdf | Ali Okan YÜKSEL 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2009-12-17 | Cisco ASA &lt;= 8.x VPN SSL module Clientless URL-list control bypass | http://www.exploit-db.com/download/10510 | David Eduardo Acosta Rodriguez 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2009-11-10 | Mozilla NSS NULL Character CA SSL Certificate Validation Security Bypass Vulnerability | http://www.exploit-db.com/download/10071 | Dan Kaminsky 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2009-06-30 |  Mozilla NSS NULL Character CA SSL Certificate Validation Security Bypass Vulnerability | http://www.exploit-db.com/download/33128 | Dan Kaminsky 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2009-06-04 | OpenSSL &lt; 0.9.8i DTLS ChangeCipherSpec Remote DoS Exploit | http://www.exploit-db.com/download/8873 | Jon Oberheide 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2009-05-29 | SonicWALL SSL-VPN 'cgi-bin/welcome/VirtualOffice' Remote Format String Vulnerability | http://www.exploit-db.com/download/33016 | Patrick Webster 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2009-05-18 | OpenSSL &lt;= 0.9.8k, 1.0.0-beta2 DTLS Remote Memory Exhaustion DoS | http://www.exploit-db.com/download/8720 | Jon Oberheide 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2009-02-09 | Netgear embedded Linux for the SSL312 router DoS Vulnerability | http://www.exploit-db.com/download/8008 | Rembrandt 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2008-09-10 | The Pirate Bay un-SSL | http://www.exploit-db.com/wp-content/themes/exploit/docs/223.pdf | Stanislaw Pusep 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2008-06-01 | Debian OpenSSL Predictable PRNG Bruteforce SSH Exploit (Python) | http://www.exploit-db.com/download/5720 | WarCat team 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2008-05-16 | Debian OpenSSL Predictable PRNG Bruteforce SSH Exploit (ruby) | http://www.exploit-db.com/download/5632 | L4teral 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2008-05-15 | Debian OpenSSL Predictable PRNG Bruteforce SSH Exploit | http://www.exploit-db.com/download/5622 | Markus Mueller 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2008-04-23 | F5 Networks FirePass 4100 SSL VPN 'installControl.php3' - Cross-Site Scripting Vulnerability | http://www.exploit-db.com/download/31698 | Alberto Cuesta Partida 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2008-02-21 | Eagle Software Aeries Student Information System 3.7.2.2/3.8.2.8 ClassList.asp Term Parameter SQL Injection | http://www.exploit-db.com/download/31277 | Arsalan Emamjomehkashan 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2008-01-04 | MySQL &lt;= 6.0 yaSSL &lt;= 1.7.5 - Hello Message Buffer Overflow | http://www.exploit-db.com/download/9953 | MC 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-12-23 | OpenSSL &lt; 0.9.7l / 0.9.8d - SSLv2 Client Crash Exploit | http://www.exploit-db.com/download/4773 | Noam Rathaus 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-11-30 | F5 Networks FirePass 4100 SSL VPN My.Logon.PHP3 Cross-Site Scripting Vulnerability | http://www.exploit-db.com/download/30833 | Richard Brain 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-11-12 | F5 FirePass 4100 SSL VPN Download_Plugin.PHP3 Cross-Site Scripting Vulnerability | http://www.exploit-db.com/download/30755 | Jan Fry 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-11-10 | F5 Networks FirePass 4100 SSL VPN Download_Plugin.PHP3 Cross-Site Scripting Vulnerability | http://www.exploit-db.com/download/30834 | Adrian Pastor 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-11-01 | SonicWALL SSL VPN 1.3 3 WebCacheCleaner ActiveX FileDelete Method Traversal Arbitrary File Deletion  | http://www.exploit-db.com/download/30730 | Will Dormann 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-11-01 | SonicWall SSL-VPN NeLaunchCtrl ActiveX Control Remote Exploit | http://www.exploit-db.com/download/4594 | krafty 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-10-21 | Apache Tomcat (webdav) Remote File Disclosure Exploit (ssl support) | http://www.exploit-db.com/download/4552 | h3rcul3s 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-10-15 | NETGEAR SSL312 PROSAFE SSL VPN-Concentrator 25 Error Page Cross Site Scripting Vulnerability | http://www.exploit-db.com/download/30673 | SkyOut 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-07-28 | VMware IntraProcessLogging.dll 5.5.3.42958 Arbitrary Data Write Exploit | http://www.exploit-db.com/download/4240 | callAX 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-03-07 | PHP &lt; 4.4.5 / 5.2.1 (shmop) SSL RSA Private-Key Disclosure Exploit | http://www.exploit-db.com/download/3427 | Stefan Esser 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-03-02 | Novell Access Management SSLVPN Server Security Bypass Vulnerability | http://www.exploit-db.com/download/29699 | anonymous 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-02-21 | Nortel SSL VPN Linux Client &lt;= 6.0.3 - Local Privilege Escalation Exploit | http://www.exploit-db.com/download/3356 | Jon Hart 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2006-09-28 | OpenSSL SSLv2 - Null Pointer Dereference Client Denial of Service Vulnerability | http://www.exploit-db.com/download/28726 | Noam Rathaus 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2006-03-21 | F5 Firepass 4100 SSL VPN Cross-Site Scripting Vulnerability | http://www.exploit-db.com/download/27452 | ILION Research 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2005-12-08 | Nortel SSL VPN 4.2.1 .6 Web Interface Input Validation Vulnerability | http://www.exploit-db.com/download/26771 | Daniel Fabian 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2005-11-05 | linux-ftpd-ssl 0.17 (MKD/CWD) Remote Root Exploit | http://www.exploit-db.com/download/1295 | kingcope 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2004-09-10 | Apache 2.0.x mod_ssl Remote Denial of Service Vulnerability | http://www.exploit-db.com/download/24590 | M.  
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2004-05-06 | DeleGate 7.8.x/8.x SSLway Filter Remote Stack Based Buffer Overflow Vulnerability | http://www.exploit-db.com/download/24095 | Joel Eriksson 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2004-04-21 | MS Windows IIS 5.0 SSL Remote buffer overflow Exploit (MS04-011) | http://www.exploit-db.com/download/275 | Johnny Cyberpunk 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2004-04-14 | MS Windows IIS SSL Remote Denial of Service Exploit (MS04-011) | http://www.exploit-db.com/download/176 | David Barroso 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2003-10-09 | OpenSSL ASN.1 Parsing Vulnerabilities | http://www.exploit-db.com/download/23199 | Syzop 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2003-10-09 | OpenSSL ASN.1&lt;= 0.9.6j &lt;= 0.9.7b - Brute Forcer for Parsing Bugs | http://www.exploit-db.com/download/146 | Bram Matthys 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2003-04-04 | Apache OpenSSL - Remote Exploit (Multiple Targets) (OpenFuckV2.c) | http://www.exploit-db.com/download/764 | spabam 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2003-04-02 | Passlog Daemon 0.1 SL_Parse Remote Buffer Overflow Vulnerability (1) | http://www.exploit-db.com/download/22449 | Xpl017Elz 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2003-04-02 | Passlog Daemon 0.1 SL_Parse Remote Buffer Overflow Vulnerability (2) | http://www.exploit-db.com/download/22450 | Xpl017Elz 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2003-02-19 | OpenSSL 0.9.x CBC Error Information Leakage Weakness | http://www.exploit-db.com/download/22264 | Martin Vuagnoux 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2002-07-30 | OpenSSL SSLv2 - Malformed Client Key Remote Buffer Overflow Vulnerability (1) | http://www.exploit-db.com/download/21671 | spabam 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2002-07-30 | OpenSSL SSLv2 - Malformed Client Key Remote Buffer Overflow Vulnerability (2) | http://www.exploit-db.com/download/21672 | spabam 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2002-06-22 | Mod_SSL 2.8.x Off-By-One HTAccess Buffer Overflow Vulnerability | http://www.exploit-db.com/download/21575 | Frank DENIS 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2000-12-11 | ssldump 0.9 b1 Format String Vulnerability | http://www.exploit-db.com/download/20492 | c0ncept 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2000-09-01 | QSSL Voyager 2.0 1B Arbitrary File Access | http://www.exploit-db.com/download/20206 | neonbunny 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2000-09-01 | QSSL Voyager 2.0 1B .photon Directory Information Disclosure | http://www.exploit-db.com/download/20207 | neonbunny 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2000-04-15 | QSSL QNX 4.25 A crypt() Vulnerability | http://www.exploit-db.com/download/19851 | Sean 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 1999-07-06 | Netscape Enterprise Server &lt;= 3.6 SSL Buffer Overflow DoS Vulnerability | http://www.exploit-db.com/download/19416 | Arne Vidstrom 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-24 | Heartbleed OpenSSL Information Leak Proof Of Concept | http://packetstormsecurity.com/files/download/126308/heartbleeddtls-leak.txt | Ayman Sagy 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-23 | Mass Bleed 20140423 | http://packetstormsecurity.com/files/download/126288/massbleed.sh.txt | 1N3 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-11 | Plex Media Server 0.9.9.10 CSRF / Disclosure | http://packetstormsecurity.com/files/download/126126/SA-20140411-0.txt | S. Viehbock 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-09 | Heartbleed TLS/DTLS Information Leak | http://packetstormsecurity.com/files/download/126090/heartbleed.c | prdelka 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-09 | TLS Heartbeat Proof Of Concept | http://packetstormsecurity.com/files/download/126072/heartbeat2.py.txt | Jared Stafford 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-01-28 | Check Point Session Authentication Agent 4.1 Missing Authentication | http://packetstormsecurity.com/files/download/124967/checkpoint-auth.tgz | Jakub Jozwiak 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-01-27 | Bing Cross Site Scripting | http://packetstormsecurity.com/files/download/124957/SSCHADV2013-012.txt | Stefan Schurtz 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-05-09 | GovRAT - FUD unknown RAT with special functions | http://1337day.com/exploit/22231 | metasploit 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-25 | Heartbleed OpenSSL - Information Leak Exploit (2) - DTLS Support | http://1337day.com/exploit/22172 | Ayman Sagy 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-10 | OpenSSL Heartbeat (Heartbleed) Information Leak Exploit | http://1337day.com/exploit/22129 | metasploit 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-09 |  | http://1337day.com/exploit/22122 | Fitzl Csaba 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-08 | OpenSSL TLS Heartbeat Extension - Memory Disclosure | http://1337day.com/exploit/22114 | Jared Stafford 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-04-22 | OpenSSL 1.0.1 Memory Corruption | http://1337day.com/exploit/18103 | Tavis Ormandy 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-04-22 | OpenSSL 1.0.1 ASN1 BIO Vulnerability | http://1337day.com/exploit/18104 | Tavis Ormandy 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2011-03-17 | Sun Java Applet2ClassLoader Remote Code Execution Exploit | http://1337day.com/exploit/15630 | metasploit 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-03-09 | OpenSSL &lt; 0.9.8l and previous versions Multiple Vulnerability | http://1337day.com/exploit/11232 | Bodo Moeller 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2009-12-17 | Cisco ASA &lt;= 8.x VPN SSL module Clientless URL-list control bypass | http://1337day.com/exploit/9600 | David Eduardo 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2009-11-10 |  | http://1337day.com/exploit/9583 | Dan Kaminsky 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2009-11-09 | SSL MITM Vulnerability | http://1337day.com/exploit/9582 | Pavel Kankovsky 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2008-06-01 | Debian OpenSSL Predictable PRNG Bruteforce SSH Exploit (Python) | http://1337day.com/exploit/9201 | WarCat team 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2008-05-16 | Debian OpenSSL Predictable PRNG Bruteforce SSH Exploit (ruby) | http://1337day.com/exploit/9197 | L4teral 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2008-05-15 | Debian OpenSSL Predictable PRNG Bruteforce SSH Exploit | http://1337day.com/exploit/9196 | Markus Mueller 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-11-01 | SonicWall SSL-VPN NeLaunchCtrl ActiveX Control Remote Exploit | http://1337day.com/exploit/9068 | krafty 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-10-21 | Apache Tomcat (webdav) Remote File Disclosure Exploit (ssl support) | http://1337day.com/exploit/9061 | h3rcul3s 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-07-28 |  | http://1337day.com/exploit/8996 | callAX 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2005-11-05 | linux-ftpd-ssl 0.17 (MKD/CWD) Remote Root Exploit | http://1337day.com/exploit/8640 | kcope 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2004-04-21 | MS Windows IIS 5.0 SSL Remote buffer overflow Exploit (MS04-011) | http://1337day.com/exploit/8392 | Johnny Cyberpun.. 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2003-10-12 | Debian OpenSSL Predictable PRNG Bruteforce SSH Exploit (perl) | http://1337day.com/exploit/19550 | vade79 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2003-04-04 | Apache OpenSSL Remote Exploit (Multiple Targets) (OpenFuckV2.c) | http://1337day.com/exploit/8292 | spabam 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2014-04-04 | OpenSSH rootkit backdoor tool with ssh sniffer | http://1337day.com/exploit/22098 | metasploit 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-06-05 | Sysax &lt;= 5.60 Create SSL Certificate Buffer Overflow | http://1337day.com/exploit/18432 | Craig Freyman 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-03-07 | PHP &lt; 4.4.5 / 5.2.1 (shmop) SSL RSA Private-Key Disclosure Exploit | http://1337day.com/exploit/7643 | Stefan Esser 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-02-21 |  | http://1337day.com/exploit/7633 | Jon Hart 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2013-10-16 | WHMCS  - XSS to CSRF ADD Admin Vulnerabilities | http://1337day.com/exploit/21386 | LiquidWorm 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-12-03 | FirePass SSL VPN Unauthenticated Local File Inclusion Vulnerability | http://1337day.com/exploit/19863 | SEC Consult 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-07-25 | Barracuda SSL VPN 680 Cross Site Scripting | http://1337day.com/exploit/19096 | n/a 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2011-11-16 | SonicWALL Aventail SSL-VPN SQL Injection Vulnerability | http://1337day.com/exploit/17067 | Asheesh Kumar 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2011-06-13 | ebusinesslook SQL injection Vulnerability | http://1337day.com/exploit/16319 | k's0uR! 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-02-18 | Portwise SSL VPN v4.6 Xss Vulnerabilities | http://1337day.com/exploit/10974 | Jan Fry 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2013-12-17 | PHP openssl_x509_parse() Memory Corruption Vulnerability | http://1337day.com/exploit/21694 | Stefan Esser 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2013-12-16 | PHP openssl_x509_parse() Memory Corruption Vulnerability | http://1337day.com/exploit/21682 | Stefan Esser 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2013-10-05 | Citrix Netscaler 10.0 Denial Of Service Vulnerability | http://1337day.com/exploit/21337 | sec-consult 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-07-21 | PHP 6.0 openssl_verify() Local Buffer Overflow PoC | http://1337day.com/exploit/19032 | Yakir Wizman 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-05-23 | OpenSSL 1.0.1 Buffer Overflow | http://1337day.com/exploit/18416 | Vincent Buccigr.. 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-04-20 | OpenSSL ASN1 BIO Memory Corruption Vulnerability | http://1337day.com/exploit/18079 | Tavis Ormandy 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-08-19 | SonicWALL E-Class SSL-VPN ActiveX Control Format String Overflow | http://1337day.com/exploit/13744 | Nikolas Sotiriu 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2010-04-22 | OpenSSL remote Denial of Service | http://1337day.com/exploit/11927 | n/a 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2009-06-04 | OpenSSL &lt; 0.9.8i DTLS ChangeCipherSpec Remote DoS Exploit | http://1337day.com/exploit/6881 | Jon Oberheide 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2009-05-18 | OpenSSL &lt;= 0.9.8k, 1.0.0-beta2 DTLS Remote Memory Exhaustion DoS | http://1337day.com/exploit/6867 | Jon Oberheide 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2009-02-09 | Netgear embedded Linux for the SSL312 router DOS Vulnerability | http://1337day.com/exploit/6749 | Rembrandt 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2007-12-23 | OpenSSL &lt; 0.9.7l / 0.9.8d SSLv2 Client Crash Exploit | http://1337day.com/exploit/6483 | Noam Rathaus 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2004-04-14 | MS Windows IIS SSL Remote Denial of Service Exploit (MS04-011)  | http://1337day.com/exploit/5850 | David Barroso 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2004-01-21 | Apache OpenSSL ASN.1 parsing bugs &lt;=0.9.6j BruteForce Exploit  | http://1337day.com/exploit/5839 | Bram Matthys 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2012-02-13 | linux/x86 BackBox BackConnect &amp; Reverse TCP SSL shellcode 442 bytes | http://1337day.com/exploit/17521 | TrOoN 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 2011-06-08 | linux/x86-32 - ConnectBack with SSL connection - 422 bytes | http://1337day.com/exploit/16279 | Jonathan Salwan 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 0000-00-00 | novell.pl | http://securityvulns.com/files/novell.pl | undefined 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 0000-00-00 | mysqlo.zip | http://securityvulns.com/files/mysqlo.zip | undefined 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 0000-00-00 | yasslick.zip | http://securityvulns.com/files/yasslick.zip | undefined 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 0000-00-00 | opensslex.pl | http://securityvulns.com/files/opensslex.pl | undefined 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 0000-00-00 | nortelsslex.pl | http://securityvulns.com/files/nortelsslex.pl | undefined 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 0000-00-00 | MOPB-15-2007-RSA.php | http://securityvulns.com/files/MOPB-15-2007-RSA.php | undefined 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 0000-00-00 | lnxFTPDssl_warez.c | http://securityvulns.com/files/lnxFTPDssl_warez.c | undefined 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 0000-00-00 | openssl-too-open.tar.gz | http://securityvulns.com/files/openssl-too-open.tar.gz | undefined 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 0000-00-00 | iis5x_ssl_pct.pm | http://securityvulns.com/files/iis5x_ssl_pct.pm | undefined 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 0000-00-00 | THCIISSLame.c | http://securityvulns.com/files/THCIISSLame.c | undefined 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 0000-00-00 | sslbomb.c | http://securityvulns.com/files/sslbomb.c | undefined 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 0000-00-00 | sslexp.c | http://securityvulns.com/files/sslexp.c | undefined 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 0000-00-00 | 0x82-Remote.passlogd_sniff.xpl.c | http://securityvulns.com/files/0x82-Remote.passlogd_sniff.xpl.c | undefined 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 0000-00-00 | omen-1.1.tar.gz | http://securityvulns.com/files/omen-1.1.tar.gz | undefined 
++------------------------------------------------------------------------------------------------------------------------------------------------------+
++ 0000-00-00 | OpenFuck.c | http://securityvulns.com/files/OpenFuck.c | undefined 
++------------------------------------------------------------------------------------------------------------------------------------------------------+

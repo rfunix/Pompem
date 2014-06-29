@@ -1,10 +1,10 @@
-# -*- coding: UTF-8 -*-
+# -*- coding: utf-8 -*-
 
 import requests
 import sys
+import os
 from BeautifulSoup import BeautifulStoneSoup
 sys.path.insert(0, '..')
-
 
 class DownloadPage(object):
     def __init__(self, url=None):
@@ -23,13 +23,11 @@ class DownloadPage(object):
             print (e.message)
             return None
 
-
     def postDownloadPageDay(self, host=None, postData={}):
         headers = {'User-Agent': 'Googlebot/2.1 (+http://www.googlebot.com/bot.html) '}
         s = requests.session()
         s.post(host, headers=headers, data={"agree":"OK"})
         r = s.post(host,headers=headers, data=postData)
-
 
         decodedstring = BeautifulStoneSoup(r.text,
                                               convertEntities=BeautifulStoneSoup.HTML_ENTITIES)
@@ -55,6 +53,18 @@ def WriteTxt(dictAllResults):
                 f.write("+"+"-" * 150+"+\n")
     f.close()
 
+def DownloadFile(url,directory):
+    local_filename = url.split('/')[-1]
+    fullFileName = "{0}{1}".format(directory,local_filename)
+    r = requests.get(url, stream=True)
+    if not os.path.exists(os.path.dirname(fullFileName)):
+        os.makedirs(os.path.dirname(fullFileName))
+    with open(fullFileName, 'wb') as f:
+        for chunk in r.iter_content(chunk_size=1024): 
+            if chunk:
+                f.write(chunk)
+                f.flush()
+    return fullFileName
 
 
 def WriteHtml(dictAllResults):
