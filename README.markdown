@@ -6,7 +6,7 @@ In its current version, performs searches in databases: Exploit-db, 1337day, Pac
 
 This is Pompem Web Version (PHP sintax): [WebPompem](http://www.pompem.net)
 
-## Screenshots
+## Screenshot
 ![](http://i60.tinypic.com/2u4tyxu.png)
 
 ## Installation
