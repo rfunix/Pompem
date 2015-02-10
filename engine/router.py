@@ -1,59 +1,69 @@
 # -*- coding: utf-8 -*-
-import sys
-from bots.exploit_db import ExploitDB
-from bots.packet_storm import PacketStorm
-from bots.day import BotDay
-from bots.security_vulns import SecurityVulns
-from threading import Thread
 
+import sys
 sys.path.insert(0, '..')
 
+from bots.security_vulns import SecurityVulns
+from bots.packet_storm import PacketStorm
+from bots.exploit_db import ExploitDB
+from threading import Thread
+from bots.day import BotDay
+
+
 class Router(object):
-    def __init__(self, words=None, dictAllResults={}, listWordResults=[]):
-        self.dictAllResults = dictAllResults
-        self.listWordResults =listWordResults
+    def __init__(self, words=None, dic_all_results={}, list_word_results=[]):
+        self.dic_all_results = dic_all_results
+        self.list_word_results = list_word_results
         self.words = words
 
-    def searchInBots(self):
+    def search_in_bots(self):
         if self.words:
             try:
                 for word in self.words:
-                    self.listWordResults = []
+                    self.list_word_results = []
                     if(word):
-                        th1 = Thread(target=self.addBotExploitDB, args=(word,))
+                        th1 = Thread(
+                            target=self.add_bot_exploit_db, 
+                            args=(word,))
                         th1.start()
                         th1.join()
-                        th2 = Thread(target=self.addBotPacketStorm, args=(word,))
+                        th2 = Thread(
+                            target=self.add_bot_packet_storm, 
+                            args=(word,))
                         th2.start()
                         th2.join()
-                        th3 = Thread(target=self.addBotDay, args=(word,))
+                        th3 = Thread(
+                            target=self.add_bot_day, 
+                            args=(word,))
                         th3.start()
                         th3.join()
-                        th4 = Thread(target=self.addSecurityVulns, args=(word,))
+                        th4 = Thread(
+                            target=self.add_security_vulns, 
+                            args=(word,))
                         th4.start()
                         th4.join()
-                        self.dictAllResults[word] = self.listWordResults
-                return self.dictAllResults
+                        self.dic_all_results[word] = self.list_word_results
+                return self.dic_all_results
             except Exception, ex:
                 pass
 
 
-    def addBotPacketStorm(self, word):
+    def add_bot_packet_storm(self, word):
         packetStorm = PacketStorm()
         packetStorm.filter_description = word
-        self.listWordResults.append(packetStorm.bot_search())
+        self.list_word_results.append(packetStorm.bot_search())
 
-    def addBotExploitDB(self, word):
+    def add_bot_exploit_db(self, word):
         exploitDB = ExploitDB()
         exploitDB.filter_description = str(word).strip("\n")
-        self.listWordResults.append(exploitDB.bot_search())
+        self.list_word_results.append(exploitDB.bot_search())
 
-    def addBotDay(self, word):
+    def add_bot_day(self, word):
         day = BotDay()
         day.filter_description = str(word).strip("\n")
-        self.listWordResults.append(day.bot_search())
+        self.list_word_results.append(day.bot_search())
 
-    def addSecurityVulns(self, word):
+    def add_security_vulns(self, word):
         sec = SecurityVulns()
         sec.filter_description = str(word).strip("\n")
-        self.listWordResults.append(sec.bot_search())
+        self.list_word_results.append(sec.bot_search())

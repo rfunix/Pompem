@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <title> Pompem - Exploit Finder </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="bootstrap/css/simple_style.css">
+    <link href="bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+  <body style="background-color: #000000;">
+    <div class="container">
+    <div class="row-fluid">
+        <div class="span12">
+            <center>
+                <h1 class="colorFonts">Pompem - Finder Exploit Tool</h1>
+                <h2 class="colorFonts">  Relax Lab  </h2>
+            </center>
+        </div>
+    </div>
+      <br>
+      <h3 class="colorFonts"> Results for search: </h3>
+      <br>
+      <br>
+          <center>
+                    <h3 class="colorFonts"> {word_search} </h3>
+                </center>
+                <br>
+                <br>
+                <table class="table" style="color:lime;">
+                    <thead>
+                        <tr>
+                            <td></td>
+                            <th>Date </th>
+                            <th>Description</th>
+                            <th>Download</th>
+                            <th>Author</th>
+                        </tr>
+                    </thead>
+               <tbody>
+              {list_dict_result}
+              </tbody>
+              </table>
+            <hr>
+          <br>
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>

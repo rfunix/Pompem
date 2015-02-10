@@ -21,4 +21,3 @@ class Base(object):
     @abc.abstractmethod
     def extract_data(self, html):
         pass
-

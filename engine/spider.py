@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 
-from engine.functions import DownloadFile
+from engine.functions import download_file
 from datetime import date
 import time
 import sys
@@ -27,7 +27,7 @@ class Spider(object):
                         matchName = regexNameDirectory.search(str(dictResults["Download"]))
                         if matchName:
                             fullDirectory = "./Exploits/{0}/{1}/".format(str(matchName.group(2)).replace(" ",""), wordSearch.replace(" ",""))
-                            fullname = DownloadFile(str(dictResults["Download"]),fullDirectory)
+                            fullname = download_file(str(dictResults["Download"]),fullDirectory)
                             if fullname:
                                 print ("+ {0} - {1} Full Path: {2} Download completed".format(date.today().strftime("%d/%m/%Y"),
                                                                          time.strftime("%H:%M:%S"),fullname))

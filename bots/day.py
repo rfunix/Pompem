@@ -15,7 +15,7 @@ class BotDay(Base):
         url = "http://1337day.com/search"
         data = {"dong": "{0}".format(self.filter_description), "submit_search": "Submit"}
         try:
-            pagehtml = self.object_download.postDownloadPageDay(url, data)
+            pagehtml = self.object_download.post_download_page_day(url, data)
             if (pagehtml):
                 self.extract_data(pagehtml)
         except Exception, ex:
@@ -23,7 +23,6 @@ class BotDay(Base):
         return self.results
 
     def extract_data(self, html):
-        result = Result()
         html = str(html).replace("\n", " ")
         html = re.sub(r"\"", "'", html)
         r = re.compile(r"<tr class='TableContent'>.*?>"
@@ -37,12 +36,3 @@ class BotDay(Base):
                 numDownload = re.search(r"\d+?$", self.results[len(self.results)-1]['Download'])
                 self.results[len(self.results) -1]['Download'] = \
                     "http://1337day.com/exploit/{0}".format(numDownload.group(0))
-
-
-
-
-
-
-
-
-

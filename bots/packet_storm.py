@@ -15,7 +15,7 @@ class PacketStorm(Base):
             url = "http://packetstormsecurity.com/search/files/page{0}/".format(i)
             parameters = {"q": "{0}".format(self.filter_description)}
             try:
-                pagehtml = self.object_download.getDownloadPage(url, parameters)
+                pagehtml = self.object_download.get_download_page(url, parameters)
                 if (pagehtml):
                     self.extract_data(pagehtml)
             except Exception, ex:
@@ -23,7 +23,6 @@ class PacketStorm(Base):
         return self.results
 
     def extract_data(self, html):
-        result = Result()
         html = re.sub(r"\"", "'", html)
         r = re.search(r"(?ms)<form action='/search/' method='get'.*?<div id='nv'", html)
         html = r.group()
@@ -43,10 +42,3 @@ class PacketStorm(Base):
                 self.results.append(match2.groupdict())
                 self.results[len(self.results) -1]['Download'] = \
                     "http://packetstormsecurity.com{0}".format(self.results[len(self.results) -1]['Download'])
-
-
-
-
-
-
-

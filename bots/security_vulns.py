@@ -14,7 +14,7 @@ class SecurityVulns(Base):
         url = "http://securityvulns.com/exploits/"
         parameters = {"keyword":"{0}".format(self.filter_description),}
         try:
-            pagehtml = self.object_download.getDownloadPage(url, parameters)
+            pagehtml = self.object_download.get_download_page(url, parameters)
             if (pagehtml):
                 self.extract_data(pagehtml)
         except Exception, ex:
@@ -22,7 +22,6 @@ class SecurityVulns(Base):
         return self.results
 
     def extract_data(self, html):
-        result = Result()
         html = re.sub(r"\n", "", html)
         html = re.sub(r"\"", "'", html)
         r = re.compile(r"(?i)<td bgcolor='[^']*?'.*?a class='tiny' href='([^']*?)'>([^<]*?)<")
