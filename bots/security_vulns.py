@@ -1,34 +1,27 @@
 # -*- coding: utf-8 -*-
 
-import sys
-sys.path.insert(0, '..')
-from Engine.Functions import DownloadPage
-from Model.Result import Result
-
+from model.result import Result
+from bots.bot_base import Base
 import re
 
-class SecurityVulns:
-    def __init__(self, filter_description=None, results=[],):
-        self.filter_description = filter_description
-        self.results = results
 
-    def botSearch(self):
-        d = DownloadPage()
+class SecurityVulns(Base):
+    def __init__(self):
+        Base.__init__(self)
+
+    def bot_search(self):
         self.results = []
         url = "http://securityvulns.com/exploits/"
         parameters = {"keyword":"{0}".format(self.filter_description),}
         try:
-            pagehtml = d.getDownloadPage(url, parameters)
+            pagehtml = self.object_download.get_download_page(url, parameters)
             if (pagehtml):
-                self.extractData(pagehtml)
+                self.extract_data(pagehtml)
         except Exception, ex:
             pass
         return self.results
 
-
-
-    def extractData(self, html):
-        result = Result()
+    def extract_data(self, html):
         html = re.sub(r"\n", "", html)
         html = re.sub(r"\"", "'", html)
         r = re.compile(r"(?i)<td bgcolor='[^']*?'.*?a class='tiny' href='([^']*?)'>([^<]*?)<")

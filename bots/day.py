@@ -1,32 +1,28 @@
 # -*- coding: utf-8 -*-
-import sys
-sys.path.insert(0, '..')
-from Engine.Functions import DownloadPage
-from Model.Result import Result
 
+from model.result import Result
+from bots.bot_base import Base 
 import re
 
 
-class BotDay:
-    def __init__(self, filter_description=None, results=[],):
-        self.filter_description = filter_description
-        self.results = results
 
-    def botSearch(self):
-        d = DownloadPage()
+class BotDay(Base):
+    def __init__(self):
+        Base.__init__(self)
+
+    def bot_search(self):
         self.results = []
         url = "http://1337day.com/search"
         data = {"dong": "{0}".format(self.filter_description), "submit_search": "Submit"}
         try:
-            pagehtml = d.postDownloadPageDay(url, data)
+            pagehtml = self.object_download.post_download_page_day(url, data)
             if (pagehtml):
-                self.extractData(pagehtml)
+                self.extract_data(pagehtml)
         except Exception, ex:
             pass
         return self.results
 
-    def extractData(self, html):
-        result = Result()
+    def extract_data(self, html):
         html = str(html).replace("\n", " ")
         html = re.sub(r"\"", "'", html)
         r = re.compile(r"<tr class='TableContent'>.*?>"
@@ -40,12 +36,3 @@ class BotDay:
                 numDownload = re.search(r"\d+?$", self.results[len(self.results)-1]['Download'])
                 self.results[len(self.results) -1]['Download'] = \
                     "http://1337day.com/exploit/{0}".format(numDownload.group(0))
-
-
-
-
-
-
-
-
-

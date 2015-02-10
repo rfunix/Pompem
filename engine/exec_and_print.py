@@ -1,8 +1,8 @@
 # coding: utf-8 
 
-from Engine.Router import Router
-from Engine.Functions import WriteHtml,WriteTxt
-from Engine.Spider import Spider
+from engine.router import Router
+from engine.functions import write_html, write_txt
+from engine.spider import Spider
 import webbrowser
 
 def execute(**kwargs):
@@ -15,18 +15,18 @@ def execute(**kwargs):
     else:
         router.words = kwargs["keywordsformated"]
     
-    dictAllResults = router.searchInBots()
+    dict_all_results = router.search_in_bots()
 
     if (dict(kwargs).has_key("get")):
         try:
             s = Spider()
-            s.run(dictAllResults)
+            s.run(dict_all_results)
         except Exception, ex:
             print "ERROR -> {0}".format(ex.message)
 
     if (dict(kwargs).has_key("fileText")):
         try:
-            WriteTxt(dictAllResults)
+            write_txt(dict_all_results)
             print("Your results will be saved in txt - out.txt")
             if(not dict(kwargs).has_key("fileHtml")):
                 return
@@ -35,7 +35,7 @@ def execute(**kwargs):
 
     if (dict(kwargs).has_key("fileHtml")):
         try:
-            WriteHtml(dictAllResults)
+            write_html(dict_all_results)
             print("Your results will be saved in html - out.html")
             new = 2
             url = "out.html"
@@ -45,13 +45,13 @@ def execute(**kwargs):
             print "ERROR -> {0}".format(ex.message)
 
     if (not dict(kwargs).has_key("get")):
-        for wordSearch, listResults in dictAllResults.items():
+        for word_search, listResults in dict_all_results.items():
             if (not listResults[0]):
-                print("\nWas no result found for {0}".format(wordSearch))
+                print("\nWas no result found for {0}".format(word_search))
                 continue
 
             countPrint = 0
-            print ("+Results {0}".format(wordSearch))
+            print ("+Results {0}".format(word_search))
             print ("+"+"-" * 150+"+")
             print ("+Date            Description                                     Download                                       Author")
             print ("+"+"-" * 150+"+")

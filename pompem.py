@@ -3,8 +3,8 @@
 import sys
 sys.path.insert(0, '..')
 import optparse
-from Engine.Update import UpdateVersion
-from Engine.ExecAndPrint import execute
+from engine.update import UpdateVersion
+from engine.exec_and_print import execute
 
 
 def main():
@@ -32,7 +32,7 @@ def main():
                       action="store_true", dest="help", help="-h")
     (options, args) = parser.parse_args()
 
-    argsParameters = {}
+    args_parameters = {}
     keywords = options.keywords
     fileText = options.fileText
     fileHtml = options.fileHtml
@@ -41,7 +41,7 @@ def main():
     
     help = options.help
     if help:
-       printHelpMessage()
+       print_help_message()
        return
     #keywords = "ssh"
     if (update):
@@ -49,22 +49,22 @@ def main():
         u.update() #Update from github
         return
     if (get):
-        argsParameters["get"] = True
+        args_parameters["get"] = True
     if(keywords):
         keywordsformated = str(keywords).split(",")
         if fileText:
-            argsParameters["fileText"] = fileText
+            args_parameters["fileText"] = fileText
         if fileHtml:
-            argsParameters["fileHtml"] = fileHtml
+            args_parameters["fileHtml"] = fileHtml
         if keywordsformated:
-            argsParameters["keywordsformated"] = keywordsformated
-            argsParameters["keywords"] = keywords
-        execute(**argsParameters)
+            args_parameters["keywordsformated"] = keywordsformated
+            args_parameters["keywords"] = keywords
+        execute(**args_parameters)
     else:
-        basicInfo()
+        basic_info()
         return
 
-def printHelpMessage():
+def print_help_message():
      print """
 Options:
   -h, --help                      show this help message and exit
@@ -75,7 +75,7 @@ Options:
   -g, --get                       Download exploit files
               """
 
-def basicInfo():
+def basic_info():
      print """
             Pompem - Exploit Finder  |  Developed by Relax Lab
               \n    Rafael Francischini (Programmer and Ethical Hacker) - @rfunix\n
