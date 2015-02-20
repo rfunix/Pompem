@@ -30,7 +30,7 @@ If you have not realized the Download or use virtualenv:
 
 1. Create virtual env with ```virtualenv .env```
 2. Activate virtualenv with ```source .env/bin/activate```
-3. Install dependêncies with ```pip install -r requeriments.txt```
+3. Install dependêncies with ```pip install -r requirements.txt```
 
 > If you use pip and have not vitualenv use 'sudo pip install virtualenv' or see [virtualenv website](http://www.virtualenv.org/en/latest/).
 
