@@ -32,11 +32,11 @@ class Router(object):
                             args=(word,))
                         th2.start()
                         th2.join()
-                        th3 = Thread(
-                            target=self.add_bot_day, 
-                            args=(word,))
-                        th3.start()
-                        th3.join()
+                        #th3 = Thread(
+                        #    target=self.add_bot_day, 
+                        #    args=(word,))
+                        #th3.start()
+                        #th3.join()
                         th4 = Thread(
                             target=self.add_security_vulns, 
                             args=(word,))
