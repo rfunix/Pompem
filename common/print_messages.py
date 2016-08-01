@@ -12,13 +12,22 @@ Options:
               """
 
 BASIC_INFO_MESSAGE = """
-            Pompem - Exploit Finder  |  Developed by Relax Lab
-              \n    Rafael Francischini (Programmer and Ethical Hacker) - @rfunix\n
-    Bruno Fraga (Security Researcher) - @brunofraga_net\n
-              Usage: pompem.py [-s/--search <keyword,keyword,keyword,...>]
-                               [--txt Write txt file                     ]
-                               [--html Write html file                   ]
-      \n              Get basic options and Help, use: -h\--help
+
+           __________
+           \______   \____   _____ ______   ____   _____
+            |     ___/  _ \ /      \\____ \_/ __ \ /      \\
+            |    |  (  <_> )  Y Y  \  |_> >  ___/|  Y Y  \\
+            |____|   \____/|__|_|  /   __/ \___  >__|_|  /
+                                 \/|__|        \/      \/
+
+
+    Rafael Francischini (Programmer and Ethical Hacker) - @rfunix
+    Bruno Fraga (Security Researcher) - @brunofraga_net
+
+    Usage: pompem.py [-s/--search <keyword,keyword,keyword,...>]
+                     [--txt Write txt file                     ]
+                     [--html Write html file                   ]
+                  Get basic options and Help, use: -h\--help
               """
 
 GENERATE_TXT_FILE = """
