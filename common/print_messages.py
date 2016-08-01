@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
-HELP_MESSAGE =  """
+HELP_MESSAGE = """
 Options:
   -h, --help                      show this help message and exit
   -s, --search <keyword,keyword,keyword>  text for search
@@ -34,8 +34,8 @@ GENERATE_TXT_FILE = """
 + Generate txt output file -> out.txt
 """
 
-
 MAX_PRINT_PER_SITE = 30
+
 
 def show_results(key_word, list_results):
     print ("+Results {0}".format(key_word))
@@ -52,6 +52,6 @@ def show_results(key_word, list_results):
                     break
                 count_print += 1
                 print("+ {0} | {1} | {2} ".format(exploit_data["date"],
-                                                        str(exploit_data["name"])[0:50],
-                                                        exploit_data["url"]))
+                                                  str(exploit_data["name"])[0:50],
+                                                  exploit_data["url"]))
                 print ("+" + "-" * 200 + "+")

@@ -3,6 +3,7 @@ import os
 import sys
 import subprocess
 
+
 def write_html(dict_all_results):
     """
         The write_html method read file base.html and stores in the variable
@@ -56,7 +57,7 @@ def __helper_write_html(iterable_data):
                         </tr>
                     """.format(exploit_data["date"],
                                str(exploit_data["name"]),
-                               exploit_data["url"],)
+                               exploit_data["url"], )
         table_rows += """
                     </tbody>
                 </table>
@@ -66,15 +67,16 @@ def __helper_write_html(iterable_data):
 
 
 def open_url(url):
-    if sys.platform=='win32':
+    if sys.platform == 'win32':
         os.startfile(url)
-    elif sys.platform=='darwin':
+    elif sys.platform == 'darwin':
         subprocess.Popen(['open', url])
     else:
         try:
             subprocess.Popen(['xdg-open', url])
         except OSError:
-            print 'Please open a browser on: '+url
+            print 'Please open a browser on: ' + url
+
 
 def write_txt(dict_all_results):
     """

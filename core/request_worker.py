@@ -3,6 +3,7 @@ from threading import Thread
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 from BeautifulSoup import BeautifulStoneSoup
+
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
