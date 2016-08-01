@@ -1,8 +1,8 @@
-# Pompem - Exploit Finder
+# Pompem - Exploit and Vulnerability Finder
 
-Pompem is an open source tool, which is designed to automate the search for exploits in major databases.
+Pompem is an open source tool, which is designed to automate the search for exploits and Vulnerability in major databases.
 Developed in Python, has a system of advanced search, thus facilitating the work of pentesters and ethical hackers.
-In its current version, performs searches in databases: Exploit-db, 1337day, Packetstorm Security...
+In its current version, performs searches in PacketStorm security, CXSecurity ...
 
 This is Pompem Web Version (PHP sintax): [WebPompem](http://www.pompem.net)
 
