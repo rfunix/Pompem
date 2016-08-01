@@ -50,9 +50,6 @@ Examples of use:
     python pompem.py -s "Internet Explorer,joomla,wordpress" --html
     python pompem.py -s FortiGate --txt
     python pompem.py -s ssh,ftp,mysql
-    python pompem.py -s "joomla" -g
-    python pompem.py --update
-    
 
 ## License
 
