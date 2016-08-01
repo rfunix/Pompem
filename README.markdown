@@ -16,7 +16,7 @@ You can download the latest tarball by clicking [here](https://github.com/rfunix
 Preferably, you can download pompem by cloning the [Git](https://github.com/rfunix/Pompem) repository:
 
 ```
-git clone https://github.com/rfunix/Pompem.git Pompem-dev
+git clone https://github.com/rfunix/Pompem.git
 ```
 
 Pompem works out of the box with [Python](http://www.python.org/download/) version '''2.6.x''' and '''2.7.x''' on any platform.
