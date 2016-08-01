@@ -7,7 +7,7 @@ In its current version, performs searches in PacketStorm security, CXSecurity ..
 This is Pompem Web Version (PHP sintax): [WebPompem](http://www.pompem.net)
 
 ## Screenshot
-![](http://i.imgur.com/kLm3uHD.png)
+![](http://i.imgur.com/8TWu7Tz.png)
 
 ## Installation
 
