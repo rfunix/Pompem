@@ -57,10 +57,6 @@ class PacketStorm(Scraper):
                 print  traceback.print_exc()
         self._get_results()
 
-    def join(self):
-        Thread.join(self)
-        return self.list_result
-
     def _parser(self, html):
         for item in self.regex_item.finditer(html):
             item_html = item.group(0)
@@ -105,10 +101,6 @@ class CXSecurity(Scraper):
                 print  traceback.print_exc()
             self._get_results()
 
-    def join(self):
-        Thread.join(self)
-        return self.list_result
-
     def _parser(self, html):
         for item in self.regex_item.finditer(html):
             item_html = item.group(0)
@@ -151,10 +143,6 @@ class ZeroDay(Scraper):
             import traceback
             print  traceback.print_exc()
         self._get_results()
-
-    def join(self):
-        Thread.join(self)
-        return self.list_result
 
     def _parser(self, html):
         for item in self.regex_item.finditer(html):

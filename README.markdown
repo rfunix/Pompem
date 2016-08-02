@@ -4,8 +4,6 @@ Pompem is an open source tool, which is designed to automate the search for expl
 Developed in Python, has a system of advanced search, thus facilitating the work of pentesters and ethical hackers.
 In its current version, performs searches in PacketStorm security, CXSecurity ...
 
-This is Pompem Web Version (PHP sintax): [WebPompem](http://www.pompem.net)
-
 ## Screenshot
 ![](http://i.imgur.com/8TWu7Tz.png)
 
