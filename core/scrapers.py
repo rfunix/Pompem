@@ -13,12 +13,21 @@ class Scraper(Thread):
         self.list_result = None
         self.list_req_workers = []
 
-    def parser(self):
+    def _parser(self):
         raise NotImplementedError()
 
     def join(self):
         Thread.join(self)
         return self.list_result
+
+    def _get_results(self):
+        for r_worker in self.list_req_workers:
+            try:
+                html = r_worker.join()
+                self._parser(html)
+            except Exception, e:
+                import traceback
+                print traceback.print_exc()
 
 
 class PacketStorm(Scraper):
@@ -47,15 +56,6 @@ class PacketStorm(Scraper):
                 import traceback
                 print  traceback.print_exc()
         self._get_results()
-
-    def _get_results(self):
-        for r_worker in self.list_req_workers:
-            try:
-                html = r_worker.join()
-                self._parser(html)
-            except Exception, e:
-                import traceback
-                print traceback.print_exc()
 
     def join(self):
         Thread.join(self)
@@ -105,15 +105,6 @@ class CXSecurity(Scraper):
                 print  traceback.print_exc()
             self._get_results()
 
-    def _get_results(self):
-        for r_worker in self.list_req_workers:
-            try:
-                html = r_worker.join()
-                self._parser(html)
-            except Exception, e:
-                import traceback
-                print traceback.print_exc()
-
     def join(self):
         Thread.join(self)
         return self.list_result
@@ -124,6 +115,52 @@ class CXSecurity(Scraper):
             dict_result = {}
             url_exploit = self.regex_url.search(item_html).group(1)
             dict_result['url'] = url_exploit
+            match_date = self.regex_date.search(item_html)
+            date = "{0}-{1}-{2}".format(match_date.group(3),
+                                        match_date.group(2),
+                                        match_date.group(1)
+                                        )
+            dict_result['date'] = date
+            dict_result['name'] = self.regex_name.search(item_html).group(1)
+            self.list_result.append(dict_result)
+
+
+class ZeroDay(Scraper):
+    def __init__(self, key_word):
+        Scraper.__init__(self)
+        self.name_site = "ZeroDay"
+        self.name_class = ZeroDay.__name__
+        self.key_word = key_word
+        self.url = "https://j5dtyooqyukedkrl.onion.to/search?search_request={0}"
+        self.session_url = "https://j5dtyooqyukedkrl.onion.to"
+        self.base_url = "https://j5dtyooqyukedkrl.onion.to"
+        self.list_result = []
+        self.regex_item = re.compile(r'(?msi)<div class="ExploitTableContent".*?<div class="tips_value_big">')
+        self.regex_date = re.compile(r'(?msi)href="/date.*?>(\d{2})-(\d{2})-(\d{4})')
+        self.regex_url = re.compile(r'(?msi)href="(/exploit.*?)"')
+        self.regex_name = re.compile(r'(?msi)href="/exploit.*?">([^<]*?)<')
+
+    def run(self, ):
+        try:
+            url_search = self.url.format(self.key_word)
+            req_worker = RequestWorker(url=url_search, data={'agree': 'Yes%2C+I+agree'},
+                                       session_url=self.session_url)
+            req_worker.start()
+            self.list_req_workers.append(req_worker)
+        except Exception, e:
+            import traceback
+            print  traceback.print_exc()
+        self._get_results()
+
+    def join(self):
+        Thread.join(self)
+        return self.list_result
+
+    def _parser(self, html):
+        for item in self.regex_item.finditer(html):
+            item_html = item.group(0)
+            dict_result = {}
+            dict_result['url'] = self.base_url + self.regex_url.search(item_html).group(1)
             match_date = self.regex_date.search(item_html)
             date = "{0}-{1}-{2}".format(match_date.group(3),
                                         match_date.group(2),
