@@ -20,6 +20,15 @@ class Scraper(Thread):
         Thread.join(self)
         return self.list_result
 
+    def _get_results(self):
+        for r_worker in self.list_req_workers:
+            try:
+                html = r_worker.join()
+                self._parser(html)
+            except Exception, e:
+                import traceback
+                print traceback.print_exc()
+
 
 class PacketStorm(Scraper):
     def __init__(self, key_word):
@@ -47,19 +56,6 @@ class PacketStorm(Scraper):
                 import traceback
                 print  traceback.print_exc()
         self._get_results()
-
-    def _get_results(self):
-        for r_worker in self.list_req_workers:
-            try:
-                html = r_worker.join()
-                self._parser(html)
-            except Exception, e:
-                import traceback
-                print traceback.print_exc()
-
-    def join(self):
-        Thread.join(self)
-        return self.list_result
 
     def _parser(self, html):
         for item in self.regex_item.finditer(html):
@@ -105,18 +101,6 @@ class CXSecurity(Scraper):
                 print  traceback.print_exc()
             self._get_results()
 
-    def _get_results(self):
-        for r_worker in self.list_req_workers:
-            try:
-                html = r_worker.join()
-                self._parser(html)
-            except Exception, e:
-                import traceback
-                print traceback.print_exc()
-
-    def join(self):
-        Thread.join(self)
-        return self.list_result
 
     def _parser(self, html):
         for item in self.regex_item.finditer(html):
