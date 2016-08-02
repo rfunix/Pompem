@@ -27,7 +27,7 @@ class Scraper(Thread):
                 self._parser(html)
             except Exception, e:
                 import traceback
-                print traceback.print_exc()
+                traceback.print_exc()
 
 
 class PacketStorm(Scraper):
@@ -54,7 +54,7 @@ class PacketStorm(Scraper):
                 self.list_req_workers.append(req_worker)
             except Exception, e:
                 import traceback
-                print  traceback.print_exc()
+                traceback.print_exc()
         self._get_results()
 
     def _parser(self, html):
@@ -98,7 +98,7 @@ class CXSecurity(Scraper):
                 self.list_req_workers.append(req_worker)
             except Exception, e:
                 import traceback
-                print  traceback.print_exc()
+                traceback.print_exc()
             self._get_results()
 
     def _parser(self, html):
@@ -141,7 +141,7 @@ class ZeroDay(Scraper):
             self.list_req_workers.append(req_worker)
         except Exception, e:
             import traceback
-            print  traceback.print_exc()
+            traceback.print_exc()
         self._get_results()
 
     def _parser(self, html):
