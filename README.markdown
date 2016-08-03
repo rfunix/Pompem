@@ -2,7 +2,7 @@
 
 Pompem is an open source tool, which is designed to automate the search for exploits and Vulnerability in major databases.
 Developed in Python, has a system of advanced search, thus facilitating the work of pentesters and ethical hackers.
-In its current version, performs searches in PacketStorm security, CXSecurity ...
+In its current version, performs searches in PacketStorm security, CXSecurity, ZeroDay, Vulners ...
 
 ## Screenshot
 ![](http://i.imgur.com/8TWu7Tz.png)
@@ -17,16 +17,15 @@ Preferably, you can download pompem by cloning the [Git](https://github.com/rfun
 git clone https://github.com/rfunix/Pompem.git
 ```
 
-Pompem works out of the box with [Python](http://www.python.org/download/) version '''2.6.x''' and '''2.7.x''' on any platform.
+Pompem works out of the box with [Python](http://www.python.org/download/) version '''3.5.x''' on any platform.
 
 Pompem lib uses the following setup:
 
-* [BeautifulSoup](http://www.crummy.com/software/BeautifulSoup/)
 * [Requests](http://docs.python-requests.org/en/latest/)
 
 If you have not realized the Download or use virtualenv:
 
-1. Create virtual env with ```virtualenv .env```
+1. Create virtual env with ```virtualenv -p python3 .env```
 2. Activate virtualenv with ```source .env/bin/activate```
 3. Install dependêncies with ```pip install -r requirements.txt```
 
