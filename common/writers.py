@@ -82,16 +82,14 @@ def write_txt(dict_all_results):
     """
         Write result in file out.txt for better viewing.
     """
-    for word_search, list_results in dict_all_results.items():
-        if not list_results[0]:
-            continue
-        with open("out.txt", "w") as f:
-            f.write("date;description;url\n")
-            for dict_result in list_results:
-                for key, result in dict_result.items():
-                    for exploit_data in result:
-                        f.write("{0};{1};{2}\n".format(
-                            exploit_data["date"],
-                            str(exploit_data["name"]),
-                            exploit_data["url"])
-                        )
+    with open("out.txt", "w") as f:
+        f.write("date;description;url\n")
+        for word_search, list_results in dict_all_results.items():
+                for dict_result in list_results:
+                    for key, result in dict_result.items():
+                        for exploit_data in result:
+                            f.write("{0};{1};{2}\n".format(
+                                exploit_data["date"],
+                                str(exploit_data["name"]),
+                                exploit_data["url"])
+                            )
