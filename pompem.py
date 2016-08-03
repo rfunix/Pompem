@@ -34,10 +34,10 @@ def main():
 
     if not parameters.keywords:
         if parameters.help:
-            print HELP_MESSAGE
+            print (HELP_MESSAGE)
             exit(0)
         else:
-            print BASIC_INFO_MESSAGE
+            print (BASIC_INFO_MESSAGE)
             exit(0)
 
     exploit_finder = ExploitFinder(parameters)

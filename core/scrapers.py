@@ -4,7 +4,8 @@
 from threading import Thread
 import datetime
 import re
-from core.request_worker import RequestWorker
+from core.request_worker import RequestWorker, RequestWorkerHttpLib
+import json
 
 
 class Scraper(Thread):
@@ -25,7 +26,7 @@ class Scraper(Thread):
             try:
                 html = r_worker.join()
                 self._parser(html)
-            except Exception, e:
+            except Exception as e:
                 import traceback
                 traceback.print_exc()
 
@@ -52,7 +53,7 @@ class PacketStorm(Scraper):
                 req_worker = RequestWorker(url_search)
                 req_worker.start()
                 self.list_req_workers.append(req_worker)
-            except Exception, e:
+            except Exception as e:
                 import traceback
                 traceback.print_exc()
         self._get_results()
@@ -96,7 +97,7 @@ class CXSecurity(Scraper):
                 req_worker = RequestWorker(url_search)
                 req_worker.start()
                 self.list_req_workers.append(req_worker)
-            except Exception, e:
+            except Exception as e:
                 import traceback
                 traceback.print_exc()
             self._get_results()
@@ -127,10 +128,10 @@ class ZeroDay(Scraper):
         self.session_url = "https://j5dtyooqyukedkrl.onion.to"
         self.base_url = "https://j5dtyooqyukedkrl.onion.to"
         self.list_result = []
-        self.regex_item = re.compile(r'(?msi)<div class="ExploitTableContent".*?<div class="tips_value_big">')
-        self.regex_date = re.compile(r'(?msi)href="/date.*?>(\d{2})-(\d{2})-(\d{4})')
-        self.regex_url = re.compile(r'(?msi)href="(/exploit.*?)"')
-        self.regex_name = re.compile(r'(?msi)href="/exploit.*?">([^<]*?)<')
+        self.regex_item = re.compile(r"(?msi)<div class='ExploitTableContent'.*?<div class='tips_value_big'>")
+        self.regex_date = re.compile(r"(?msi)href='/date.*?>(\d{2})-(\d{2})-(\d{4})")
+        self.regex_url = re.compile(r"(?msi)href='(/exploit.*?)'")
+        self.regex_name = re.compile(r"(?msi)href='/exploit.*?'>([^<]*?)<")
 
     def run(self, ):
         try:
@@ -139,7 +140,7 @@ class ZeroDay(Scraper):
                                        session_url=self.session_url)
             req_worker.start()
             self.list_req_workers.append(req_worker)
-        except Exception, e:
+        except Exceptiona as e:
             import traceback
             traceback.print_exc()
         self._get_results()
@@ -156,4 +157,37 @@ class ZeroDay(Scraper):
                                         )
             dict_result['date'] = date
             dict_result['name'] = self.regex_name.search(item_html).group(1)
+            self.list_result.append(dict_result)
+
+
+class Vulners(Scraper):
+    def __init__(self, key_word):
+        Scraper.__init__(self)
+        self.name_site = "Vulners"
+        self.name_class = Vulners.__name__
+        self.key_word = key_word
+        self.url_domain = "vulners.com"
+        self.path = "/api/v3/search/lucene/"
+        self.list_result = []
+        self.regex_date = re.compile(r"(\d{4})-(\d{2})-(\d{2})")
+
+    def run(self, ):
+        try:
+            data = {}
+            data['query'] = "{0} last year".format(self.key_word)
+            req_worker = RequestWorkerHttpLib(self.url_domain, self.path, data)
+            req_worker.start()
+            self.list_req_workers.append(req_worker)
+        except Exception as e:
+            import traceback
+            traceback.print_exc()
+        self._get_results()
+
+    def _parser(self, html):
+        json_data = json.loads(html)
+        for data in json_data['data']['search']:
+            dict_result = {}
+            dict_result['url'] = data["_source"]['href']
+            dict_result['name'] = data["_source"]["title"]
+            dict_result['date'] = self.regex_date.search(data["_source"]["published"]).group(0)
             self.list_result.append(dict_result)

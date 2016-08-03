@@ -46,7 +46,7 @@ def show_results(key_word, list_results):
 
     for dict_result in list_results:
         count_print = 0
-        for result in dict_result.itervalues():
+        for key , result in dict_result.items():
             for exploit_data in result:
                 if (count_print > MAX_PRINT_PER_SITE):
                     break

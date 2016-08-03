@@ -45,7 +45,7 @@ def __helper_write_html(iterable_data):
             <tbody>
         """.format(word_search)
         for dict_result in list_results:
-            for result in dict_result.itervalues():
+            for key, result in dict_result.items():
                 for exploit_data in result:
                     data_result["word_search"] = word_search
                     table_rows += r"""
@@ -75,7 +75,7 @@ def open_url(url):
         try:
             subprocess.Popen(['xdg-open', url])
         except OSError:
-            print 'Please open a browser on: ' + url
+            print ('Please open a browser on: ' + url)
 
 
 def write_txt(dict_all_results):
@@ -88,7 +88,7 @@ def write_txt(dict_all_results):
         with open("out.txt", "w") as f:
             f.write("date;description;url\n")
             for dict_result in list_results:
-                for result in dict_result.itervalues():
+                for key, result in dict_result.items():
                     for exploit_data in result:
                         f.write("{0};{1};{2}\n".format(
                             exploit_data["date"],
