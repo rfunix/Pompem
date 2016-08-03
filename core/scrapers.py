@@ -191,3 +191,50 @@ class Vulners(Scraper):
             dict_result['name'] = data["_source"]["title"]
             dict_result['date'] = self.regex_date.search(data["_source"]["published"]).group(0)
             self.list_result.append(dict_result)
+
+
+class NationaVulnerabilityDB(Scraper):
+    def __init__(self, key_word):
+        Scraper.__init__(self)
+        self.name_site = "NationaVulnerabilityDB"
+        self.name_class = NationaVulnerabilityDB.__name__
+        self.key_word = key_word
+        self.url = "https://web.nvd.nist.gov/view/vuln/search-results?query={0}&search_type=all&cves=on&startIndex={1}"
+        self.base_url = 'https://web.nvd.nist.gov/view/vuln/'
+        self.page_max = 60
+        self.list_result = []
+        self.regex_item = re.compile(r'(?msi)<dt>.*?a href="detail.*?</dd>')
+        self.regex_name = re.compile(r'(?msi)<dt>.*?Summary:.*?>([^<]*?)<')
+        self.regex_date = re.compile(r'(?msi)<dt>.*?Summary:.*?>.*?Published:.*?>.*?(\d{1,2})\/(\d{1,2})\/(\d{4})')
+        self.regex_url = re.compile(r'(?msi)<dt>.*?href="([^"]*?vulnId.*?)"')
+
+    def run(self, ):
+        for page in range(0,self.page_max+1,20):
+            try:
+                url_search = self.url.format(
+                    self.key_word,
+                    page
+                )
+                req_worker = RequestWorker(url_search)
+                req_worker.start()
+                self.list_req_workers.append(req_worker)
+            except Exception as e:
+                import traceback
+                traceback.print_exc()
+            self._get_results()
+
+    def _parser(self, html):
+        for item in self.regex_item.finditer(html):
+            item_html = item.group(0)
+            dict_results = {}
+            dict_results['name'] = self.regex_name.search(item_html).group(1)
+            match_date = self.regex_date.search(item_html)
+            date = "{0}-{1}-{2}".format(match_date.group(3),
+                                        match_date.group(1),
+                                        match_date.group(2)
+                                        )
+            dict_results['date'] = date
+            dict_results['url'] = self.base_url + self.regex_url.search(item_html).group(1)
+            self.list_result.append(dict_results)
+
+
