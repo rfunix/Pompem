@@ -100,7 +100,7 @@ class CXSecurity(Scraper):
             except Exception as e:
                 import traceback
                 traceback.print_exc()
-            self._get_results()
+        self._get_results()
 
     def _parser(self, html):
         for item in self.regex_item.finditer(html):
@@ -140,7 +140,7 @@ class ZeroDay(Scraper):
                                        session_url=self.session_url)
             req_worker.start()
             self.list_req_workers.append(req_worker)
-        except Exceptiona as e:
+        except Exception as e:
             import traceback
             traceback.print_exc()
         self._get_results()
@@ -221,7 +221,7 @@ class NationaVulnerabilityDB(Scraper):
             except Exception as e:
                 import traceback
                 traceback.print_exc()
-            self._get_results()
+        self._get_results()
 
     def _parser(self, html):
         for item in self.regex_item.finditer(html):
@@ -235,6 +235,46 @@ class NationaVulnerabilityDB(Scraper):
                                         )
             dict_results['date'] = date
             dict_results['url'] = self.base_url + self.regex_url.search(item_html).group(1)
+            self.list_result.append(dict_results)
+
+class WpvulndbB(Scraper):
+    def __init__(self, key_word):
+        Scraper.__init__(self)
+        self.name_site = "Wpvulndb"
+        self.name_class = NationaVulnerabilityDB.__name__
+        self.key_word = key_word
+        self.url = "https://wpvulndb.com/searches?page={1}&text={0}&utf8=%E2%9C%93&vuln_type="
+        self.url_base = "https://wpvulndb.com"
+        self.page_max = 2
+        self.list_result = []
+        self.regex_item = re.compile(r'(?msi)<tr>.*?<td>.*?<a.*?</tr>')
+        self.regex_name = re.compile(r'(?msi)<a href="[^"]*?">\d+?<.*?href.*?>([^<]*?)<')
+        self.regex_date = re.compile(r'(?msi)created-at">([^<]*?)<')
+        self.regex_url = re.compile(r'(?msi)<a href="([^"]*?)">\d+?<')
+
+    def run(self, ):
+        for page in range(self.page_max+1):
+            try:
+                url_search = self.url.format(
+                    self.key_word,
+                    page
+                )
+                req_worker = RequestWorker(url_search)
+                req_worker.start()
+                self.list_req_workers.append(req_worker)
+            except Exception as e:
+                import traceback
+                traceback.print_exc()
+        self._get_results()
+
+    def _parser(self, html):
+        for item in self.regex_item.finditer(html):
+            dict_results = {}
+            item_html = item.group(0)
+            url = self.url_base + self.regex_url.search(item_html).group(1)
+            dict_results['url'] = url
+            dict_results['name'] = self.regex_name.search(item_html).group(1)
+            dict_results['date'] =  self.regex_date.search(item_html).group(1)
             self.list_result.append(dict_results)
 
 
