@@ -42,7 +42,15 @@ You may greatly benefit from using [virtualenv](https://virtualenv.pypa.io/en/st
 To get the list of basic options and information about the project:
 
 ```bash
-$ python3.5 pompem.py -h
+python3.5 pompem.py -h
+
+Options:
+  -h, --help                      show this help message and exit
+  -s, --search <keyword,keyword,keyword>  text for search
+  --txt                           Write txt File
+  --html                          Write html File
+  --update                        upgrade to latest version
+  -g, --get                       Download exploit files
 ```
 
 Examples of use:
