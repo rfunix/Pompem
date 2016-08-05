@@ -11,7 +11,7 @@ In its current version, performs searches in PacketStorm security, CXSecurity, Z
 
 You can download the latest tarball by clicking [here](https://github.com/rfunix/Pompem/tarball/master) or latest zipball by clicking  [here](https://github.com/rfunix/Pompem/zipball/master).
 
-Preferably, you can download pompem by cloning the [Git](https://github.com/rfunix/Pompem) repository:
+You can download pompem by cloning the [Git](https://github.com/rfunix/Pompem) repository:
 
 ```
 git clone https://github.com/rfunix/Pompem.git
@@ -23,13 +23,13 @@ Pompem lib uses the following setup:
 
 * [Requests](http://docs.python-requests.org/en/latest/)
 
-If you have not realized the Download or use virtualenv:
+You can use virtualenv too:
 
-1. Create virtual env with ```virtualenv -p python3 .env```
-2. Activate virtualenv with ```source .env/bin/activate```
-3. Install dependêncies with ```pip install -r requirements.txt```
+1. Create virtual env  -> ```virtualenv -p python3 .env```
+2. Activate virtualenv -> ```source .env/bin/activate```
+3. Install dependêncies -> ```pip install -r requirements.txt```
 
-> If you use pip and have not vitualenv use 'sudo pip install virtualenv' or see [virtualenv website](http://www.virtualenv.org/en/latest/).
+> If you use pip and have not vitualenv use 'sudo pip install virtualenv' or [virtualenv website](http://www.virtualenv.org/en/latest/).
 
 
 ## Usage
