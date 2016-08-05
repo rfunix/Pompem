@@ -21,7 +21,7 @@ You can also download Pompem directly from its [Git repository](https://github.c
 git clone https://github.com/rfunix/Pompem.git
 ```
 
-Pompem works out of the box with [Python 3.5.x](python.com/link for 3.5) on any platform.
+Pompem works out of the box with [Python 3.5](python.com/link for 3.5) on any platform.
 
 ## Dependencies
 
@@ -33,7 +33,7 @@ Pompem requires the following packages:
 
 Get Pompem up and running in a single command:
 
-$ python install -r requirements.txt
+$ python3.5 install -r requirements.txt
 
 You may greatly benefit from using [virtualenv](), which isolates packages installed for every project. If you have never used it, simply check [this tutorial](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
 
