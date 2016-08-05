@@ -23,7 +23,7 @@ $ git clone https://github.com/rfunix/Pompem.git
 
 Pompem works out of the box with Python 3.5 on any platform and requires the following packages:
 
-- Requests 2.9.1+
+- [Requests 2.9.1+](http://docs.python-requests.org/en/master/)
 
 ## Installation
 
