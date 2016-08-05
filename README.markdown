@@ -5,7 +5,7 @@ Developed in Python, has a system of advanced search, that help the work of pent
 In its current version, performs searches in PacketStorm security, CXSecurity, ZeroDay, Vulners, National Vulnerability Database, WPScan Vulnerability Database ...
 
 ## Screenshot
-![](http://i.imgur.com/8TWu7Tz.png)
+![](http://imgur.com/a/72ijh)
 
 ## Installation
 
