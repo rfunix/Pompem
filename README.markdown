@@ -2,7 +2,7 @@
 
 Pompem is an open source tool, designed to automate the search for Exploits and Vulnerability in the most important databases.
 Developed in Python, has a system of advanced search, that help the work of pentesters and ethical hackers.
-In the current version, performs searches in PacketStorm security, CXSecurity, ZeroDay, Vulners, National Vulnerability Database, WPScan Vulnerability Database ...
+In the current version, it performs searches in PacketStorm security, CXSecurity, ZeroDay, Vulners, National Vulnerability Database, WPScan Vulnerability Database ...
 
 ## Screenshots
 ![](http://i.imgur.com/lhBRLhl.png)
@@ -13,27 +13,29 @@ In the current version, performs searches in PacketStorm security, CXSecurity, Z
 
 ## Installation
 
-You can download the latest tarball by clicking [here](https://github.com/rfunix/Pompem/tarball/master) or latest zipball by clicking  [here](https://github.com/rfunix/Pompem/zipball/master).
+You can download the latest tarball by clicking [here](https://github.com/rfunix/Pompem/tarball/master) or latest zipball by clicking [here](https://github.com/rfunix/Pompem/zipball/master).
 
-You can download pompem by cloning the [Git](https://github.com/rfunix/Pompem) repository:
+You can also download Pompem directly from its [Git repository](https://github.com/rfunix/Pompem):
 
 ```
 git clone https://github.com/rfunix/Pompem.git
 ```
 
-Pompem works out of the box with [Python](http://www.python.org/download/) version '''3.5.x''' on any platform.
+Pompem works out of the box with [Python 3.5.x](python.com/link for 3.5) on any platform.
 
-Pompem lib uses the following setup:
+## Dependencies
 
-* [Requests](http://docs.python-requests.org/en/latest/)
+Pompem requires the following packages:
 
-You can use virtualenv too:
+- [Requests 2.9.1+](http://docs.python-requests.org/en/master/)
 
-1. Create virtual env  -> ```virtualenv -p python3 .env```
-2. Activate virtualenv -> ```source .env/bin/activate```
-3. Install dependêncies -> ```pip install -r requirements.txt```
+## Installation
 
-> If you use pip and have not vitualenv use 'sudo pip install virtualenv' or [virtualenv website](http://www.virtualenv.org/en/latest/).
+Get Pompem up and running in a single command:
+
+$ python install -r requirements.txt
+
+You may greatly benefit from using [virtualenv](), which isolates packages installed for every project. If you have never used it, simply check [this tutorial](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
 
 
 ## Usage
@@ -41,7 +43,7 @@ You can use virtualenv too:
 To get the list of basic options and information about the project:
 
 ```bash
-python pompem.py -h
+python3.5 pompem.py -h
 ```
 
 Examples of use:
