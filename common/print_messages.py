@@ -7,8 +7,6 @@ Options:
   -s, --search <keyword,keyword,keyword>  text for search
   --txt                           Write txt File
   --html                          Write html File
-  --update                        upgrade to latest version
-  -g, --get                       Download exploit files
               """
 
 BASIC_INFO_MESSAGE = """
