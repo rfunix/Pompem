@@ -11,48 +11,45 @@ In the current version, it performs searches in PacketStorm security, CXSecurity
 
 ![](http://i.imgur.com/uNyqNF0.png)
 
-## Installation
+## Source code
 
-You can download the latest tarball by clicking [here](https://github.com/rfunix/Pompem/tarball/master) or latest zipball by clicking [here](https://github.com/rfunix/Pompem/zipball/master).
+You can download the latest tarball by clicking here or latest zipball by clicking here.
 
-You can also download Pompem directly from its [Git repository](https://github.com/rfunix/Pompem):
+You can also download Pompem directly from its Git repository:
 
-```
-git clone https://github.com/rfunix/Pompem.git
-```
-
-Pompem works out of the box with [Python 3.5](python.com/link for 3.5) on any platform.
+$ git clone https://github.com/rfunix/Pompem.git
 
 ## Dependencies
 
-Pompem requires the following packages:
+Pompem works out of the box with Python 3.5 on any platform and requires the following packages:
 
-- [Requests 2.9.1+](http://docs.python-requests.org/en/master/)
+- Requests 2.9.1+
 
 ## Installation
 
 Get Pompem up and running in a single command:
 
+```
 $ python3.5 install -r requirements.txt
+```
 
-You may greatly benefit from using [virtualenv](), which isolates packages installed for every project. If you have never used it, simply check [this tutorial](http://docs.python-guide.org/en/latest/dev/virtualenvs/).
-
+You may greatly benefit from using [virtualenv](https://virtualenv.pypa.io/en/stable/), which isolates packages installed for every project. If you have never used it, simply check [this tutorial] (http://docs.python-guide.org/en/latest/dev/virtualenvs) .
 
 ## Usage
 
 To get the list of basic options and information about the project:
 
 ```bash
-python3.5 pompem.py -h
+$ python3.5 pompem.py -h
 ```
 
 Examples of use:
 
-    python3.5 pompem.py -s Wordpress
-    python3.5 pompem.py -s Joomla --html
-    python3.5 pompem.py -s "Internet Explorer,joomla,wordpress" --html
-    python3.5 pompem.py -s FortiGate --txt
-    python3.5 pompem.py -s ssh,ftp,mysql
+    $ python3.5 pompem.py -s Wordpress
+    $ python3.5 pompem.py -s Joomla --html
+    $ python3.5 pompem.py -s "Internet Explorer,joomla,wordpress" --html
+    $ python3.5 pompem.py -s FortiGate --txt
+    $ python3.5 pompem.py -s ssh,ftp,mysql
 
 ## License
 
