@@ -13,9 +13,9 @@ In the current version, it performs searches in PacketStorm security, CXSecurity
 
 ## Source code
 
-You can download the latest tarball by clicking here or latest zipball by clicking here.
+You can download the latest [tarball](https://github.com/rfunix/Pompem/archive/v0.2.0.tar.gz) by clicking here or latest [zipball](https://github.com/rfunix/Pompem/archive/v0.2.0.zip) by clicking here.
 
-You can also download Pompem directly from its Git repository:
+You can also download Pompem directly from its [Git repository](https://github.com/rfunix/Pompem):
 
 ```
 $ git clone https://github.com/rfunix/Pompem.git
@@ -23,7 +23,7 @@ $ git clone https://github.com/rfunix/Pompem.git
 
 ## Dependencies
 
-Pompem works out of the box with Python 3.5 on any platform and requires the following packages:
+Pompem works out of the box with [Python 3.5](https://www.python.org/downloads/) on any platform and requires the following packages:
 
 - [Requests 2.9.1+](http://docs.python-requests.org/en/master/)
 
