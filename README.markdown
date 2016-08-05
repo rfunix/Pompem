@@ -17,7 +17,9 @@ You can download the latest tarball by clicking here or latest zipball by clicki
 
 You can also download Pompem directly from its Git repository:
 
+```
 $ git clone https://github.com/rfunix/Pompem.git
+```
 
 ## Dependencies
 
