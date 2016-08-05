@@ -32,7 +32,7 @@ Pompem works out of the box with [Python 3.5](https://www.python.org/downloads/)
 Get Pompem up and running in a single command:
 
 ```
-$ python3.5 install -r requirements.txt
+$ pip3.5 install -r requirements.txt
 ```
 
 You may greatly benefit from using [virtualenv](https://virtualenv.pypa.io/en/stable/), which isolates packages installed for every project. If you have never used it, simply check [this tutorial] (http://docs.python-guide.org/en/latest/dev/virtualenvs) .
