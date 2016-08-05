@@ -1,52 +1,63 @@
 # Pompem - Exploit and Vulnerability Finder
 
-Pompem is an open source tool, which is designed to automate the search for exploits and Vulnerability in major databases.
-Developed in Python, has a system of advanced search, thus facilitating the work of pentesters and ethical hackers.
-In its current version, performs searches in PacketStorm security, CXSecurity, ZeroDay, Vulners, National Vulnerability Database ...
+Pompem is an open source tool, designed to automate the search for Exploits and Vulnerability in the most important databases.
+Developed in Python, has a system of advanced search, that help the work of pentesters and ethical hackers.
+In the current version, it performs searches in PacketStorm security, CXSecurity, ZeroDay, Vulners, National Vulnerability Database, WPScan Vulnerability Database ...
 
-## Screenshot
-![](http://i.imgur.com/8TWu7Tz.png)
+## Screenshots
+![](http://i.imgur.com/lhBRLhl.png)
+
+![](http://i.imgur.com/taqkdtT.png)
+
+![](http://i.imgur.com/uNyqNF0.png)
+
+## Source code
+
+You can download the latest [tarball](https://github.com/rfunix/Pompem/archive/v0.2.0.tar.gz) by clicking here or latest [zipball](https://github.com/rfunix/Pompem/archive/v0.2.0.zip) by clicking here.
+
+You can also download Pompem directly from its [Git repository](https://github.com/rfunix/Pompem):
+
+```
+$ git clone https://github.com/rfunix/Pompem.git
+```
+
+## Dependencies
+
+Pompem works out of the box with [Python 3.5](https://www.python.org/downloads/) on any platform and requires the following packages:
+
+- [Requests 2.9.1+](http://docs.python-requests.org/en/master/)
 
 ## Installation
 
-You can download the latest tarball by clicking [here](https://github.com/rfunix/Pompem/tarball/master) or latest zipball by clicking  [here](https://github.com/rfunix/Pompem/zipball/master).
-
-Preferably, you can download pompem by cloning the [Git](https://github.com/rfunix/Pompem) repository:
+Get Pompem up and running in a single command:
 
 ```
-git clone https://github.com/rfunix/Pompem.git
+$ python3.5 install -r requirements.txt
 ```
 
-Pompem works out of the box with [Python](http://www.python.org/download/) version '''3.5.x''' on any platform.
-
-Pompem lib uses the following setup:
-
-* [Requests](http://docs.python-requests.org/en/latest/)
-
-If you have not realized the Download or use virtualenv:
-
-1. Create virtual env with ```virtualenv -p python3 .env```
-2. Activate virtualenv with ```source .env/bin/activate```
-3. Install dependêncies with ```pip install -r requirements.txt```
-
-> If you use pip and have not vitualenv use 'sudo pip install virtualenv' or see [virtualenv website](http://www.virtualenv.org/en/latest/).
-
+You may greatly benefit from using [virtualenv](https://virtualenv.pypa.io/en/stable/), which isolates packages installed for every project. If you have never used it, simply check [this tutorial] (http://docs.python-guide.org/en/latest/dev/virtualenvs) .
 
 ## Usage
 
 To get the list of basic options and information about the project:
 
 ```bash
-python pompem.py -h
+$ python3.5 pompem.py -h
+
+Options:
+  -h, --help                      show this help message and exit
+  -s, --search <keyword,keyword,keyword>  text for search
+  --txt                           Write txt File
+  --html                          Write html File
 ```
 
 Examples of use:
 
-    python pompem.py -s Wordpress
-    python pompem.py -s Joomla --html
-    python pompem.py -s "Internet Explorer,joomla,wordpress" --html
-    python pompem.py -s FortiGate --txt
-    python pompem.py -s ssh,ftp,mysql
+    $ python3.5 pompem.py -s Wordpress
+    $ python3.5 pompem.py -s Joomla --html
+    $ python3.5 pompem.py -s "Internet Explorer,joomla,wordpress" --html
+    $ python3.5 pompem.py -s FortiGate --txt
+    $ python3.5 pompem.py -s ssh,ftp,mysql
 
 ## License
 
