@@ -48,11 +48,11 @@ python3.5 pompem.py -h
 
 Examples of use:
 
-    python pompem.py -s Wordpress
-    python pompem.py -s Joomla --html
-    python pompem.py -s "Internet Explorer,joomla,wordpress" --html
-    python pompem.py -s FortiGate --txt
-    python pompem.py -s ssh,ftp,mysql
+    python3.5 pompem.py -s Wordpress
+    python3.5 pompem.py -s Joomla --html
+    python3.5 pompem.py -s "Internet Explorer,joomla,wordpress" --html
+    python3.5 pompem.py -s FortiGate --txt
+    python3.5 pompem.py -s ssh,ftp,mysql
 
 ## License
 
