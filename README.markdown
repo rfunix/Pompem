@@ -4,7 +4,7 @@ Pompem is an open source tool, designed to automate the search for Exploits and 
 Developed in Python, has a system of advanced search, that help the work of pentesters and ethical hackers.
 In its current version, performs searches in PacketStorm security, CXSecurity, ZeroDay, Vulners, National Vulnerability Database, WPScan Vulnerability Database ...
 
-## Screenshot
+## Screenshots
 ![](http://i.imgur.com/lhBRLhl.png)
 
 ![](http://i.imgur.com/taqkdtT.png)
