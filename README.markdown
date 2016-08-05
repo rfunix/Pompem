@@ -7,7 +7,7 @@ In its current version, performs searches in PacketStorm security, CXSecurity, Z
 ## Screenshot
 ![](http://i.imgur.com/lhBRLhl.png)
 
-![](http://i.imgur.com/mm9S8Ir.png)
+![](http://i.imgur.com/6pauo04.png)
 
 ## Installation
 
