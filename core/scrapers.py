@@ -124,9 +124,9 @@ class ZeroDay(Scraper):
         self.name_site = "ZeroDay"
         self.name_class = ZeroDay.__name__
         self.key_word = key_word
-        self.url = "https://j5dtyooqyukedkrl.onion.to/search?search_request={0}"
-        self.session_url = "https://j5dtyooqyukedkrl.onion.to"
-        self.base_url = "https://j5dtyooqyukedkrl.onion.to"
+        self.url = "http://0day.today/search?search_request={0}"
+        self.session_url = "http://0day.today"
+        self.base_url = "http://0day.today"
         self.list_result = []
         self.regex_item = re.compile(r"(?msi)<div class='ExploitTableContent'.*?<div class='tips_value_big'>")
         self.regex_date = re.compile(r"(?msi)href='/date.*?>(\d{2})-(\d{2})-(\d{4})")
