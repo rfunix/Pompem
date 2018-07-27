@@ -2,8 +2,9 @@ import re
 from datetime import datetime
 from collections import defaultdict
 from collections import UserDict
-from core.parser_config import configs
-from core.request_worker import request_worker, request_worker_keep_session
+
+from .parser_config import configs
+from .request_worker import request_worker, request_worker_keep_session
 
 
 class BaseScraper(UserDict):
