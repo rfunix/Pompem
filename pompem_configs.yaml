@@ -11,7 +11,7 @@ scrapers:
     max_page: 2
   zeroday:
     site_name: "0day"
-    base_url: "http://0day.today"
-    url: "http://0day.today/search?search_request={0}"
+    base_url: "http://mvfjfugdwgc5uwho.onion"
+    url: "http://mvfjfugdwgc5uwho.onion/search?search_request={0}"
     max_page: 1
 

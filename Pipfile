@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 pyyaml = "*"
 aiohttp = "*"
+pysocks = "*"
 
 [dev-packages]
 
