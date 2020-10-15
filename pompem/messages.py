@@ -16,8 +16,8 @@ def get_basic_info():
 
            __________
            \______   \____   _____ ______   ____   _____
-            |     ___/  _ \ /      \\____ \_/ __ \ /      \\
-            |    |  (  <_> )  Y Y  \  |_> >  ___/|  Y Y  \\
+            |     ___/  _ \ /      \____ \_/ __ \ /     \
+            |    |  (  <_> )  Y Y  \  |_> >  ___/|  Y Y  \
             |____|   \____/|__|_|  /   __/ \___  >__|_|  /
                                  \/|__|        \/      \/
 
@@ -36,15 +36,18 @@ def show_results(keyword, exploits):
     print("+Results {0}".format(keyword))
     print("+" + "-" * 150 + "+")
     print(
-        "+Date            Description                                     Url                                    ")
+        "+Date            Description                                     Url                                    "
+    )
     print("+" + "-" * 150 + "+")
 
     count_exploits = 0
     for exploit in exploits:
-        if (count_exploits > MAX_PRINT_PER_SITE):
+        if count_exploits > MAX_PRINT_PER_SITE:
             break
         count_exploits += 1
-        print("+ {0} | {1} | {2} ".format(exploit["date"],
-                                          str(exploit["name"])[0:50],
-                                          exploit["url"]))
+        print(
+            "+ {0} | {1} | {2} ".format(
+                exploit["date"], str(exploit["name"])[0:50], exploit["url"]
+            )
+        )
         print("+" + "-" * 150 + "+")

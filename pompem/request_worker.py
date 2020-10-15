@@ -5,8 +5,8 @@ import socket
 TIMEOUT = 120
 
 headers = {
-    'User-agent': 'Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0',
-    'referer': 'https://www.google.com'
+    "User-agent": "Mozilla/5.0 (X11; Linux x86_64; rv:52.0) Gecko/20100101 Firefox/52.0",
+    "referer": "https://www.google.com",
 }
 
 
@@ -22,10 +22,7 @@ async def request_worker(url):
 
 
 async def request_worker_keep_session(url, session_url, data):
-    conn = aiohttp.TCPConnector(
-        family=socket.AF_INET,
-        verify_ssl=False,
-    )
+    conn = aiohttp.TCPConnector(family=socket.AF_INET, verify_ssl=False)
 
     async with aiohttp.ClientSession(connector=conn) as session:
         return await fetch_keep_session(session, url, data, session_url)

@@ -40,13 +40,15 @@ class BaseScraper(UserDict):
             yield self.build_exploit(item.group(0))
 
     def build_exploit(self, regex_item):
-        return {'url': self.get_exploit_url(regex_item), 'date': self.get_exploit_date(regex_item),
-                'name': self.get_exploit_name(regex_item)}
+        return {
+            "url": self.get_exploit_url(regex_item),
+            "date": self.get_exploit_date(regex_item),
+            "name": self.get_exploit_name(regex_item),
+        }
 
     def get_exploit_url(self, regex_item):
         return "{0}{1}".format(
-            self.base_url,
-            self.regex_url.search(regex_item).group(1)
+            self.base_url, self.regex_url.search(regex_item).group(1)
         )
 
     def get_exploit_date(self, regex_item):
@@ -69,27 +71,37 @@ class PacketStorm(BaseScraper):
 class CXSecurity(BaseScraper):
     regex_item = re.compile(r'(?msi)<tr>.*?<td width="17".*?<td width="550".*?</tr>')
     regex_url = re.compile(r'(?msi)<td.*?<h6><a href="([^"]*?)"')
-    regex_date = re.compile(r'(?msi)<td width="80".*?default">(\d{2})\.(\d{2})\.(\d{4})')
+    regex_date = re.compile(
+        r'(?msi)<td width="80".*?default">(\d{2})\.(\d{2})\.(\d{4})'
+    )
     regex_name = re.compile(r'(?msi)title="([^"]*?)"')
     base_url = "https://cxsecurity.com"
     exploit_endpoint = "search/wlb/DESC/AND/{}.1999.1.1/{}/30/{}/"
     max_page = 1
 
     async def __call__(self, keyword):
-        formated_date = '{dt.year}.{dt.month}.{dt.day}'.format(dt=datetime.now())
+        formated_date = "{dt.year}.{dt.month}.{dt.day}".format(dt=datetime.now())
 
         for page in range(self.max_page):
-            url = urljoin(self.base_url, self.exploit_endpoint.format(formated_date, page, keyword))
+            url = urljoin(
+                self.base_url,
+                self.exploit_endpoint.format(formated_date, page, keyword),
+            )
             html_page = await request_worker(url)
             self.data[keyword] += list(self.parser(html_page))
 
     def get_exploit_date(self, regex_item):
-        return "{0}-{1}-{2}".format(self.regex_date.search(regex_item).group(1),
-                                    self.regex_date.search(regex_item).group(2),
-                                    self.regex_date.search(regex_item).group(3))
+        return "{0}-{1}-{2}".format(
+            self.regex_date.search(regex_item).group(1),
+            self.regex_date.search(regex_item).group(2),
+            self.regex_date.search(regex_item).group(3),
+        )
+
 
 class ZeroDay(BaseScraper):
-    regex_item = re.compile(r"(?msi)<div class='ExploitTableContent'.*?<div class='tips_value_big'>")
+    regex_item = re.compile(
+        r"(?msi)<div class='ExploitTableContent'.*?<div class='tips_value_big'>"
+    )
     regex_date = re.compile(r"(?msi)href='/date.*?>(\d{2})-(\d{2})-(\d{4})")
     regex_url = re.compile(r"(?msi)href='(/exploit.*?)'")
     regex_name = re.compile(r"(?msi)href='/exploit.*?'>([^<]*?)<")
@@ -101,13 +113,13 @@ class ZeroDay(BaseScraper):
         for _ in range(self.max_page):
             url = urljoin(self.base_url, self.exploit_endpoint.format(keyword))
             html_page = await request_worker_keep_session(
-                url=url,
-                session_url=self.base_url,
-                data={"agree": "Yes%2C+I+agree"},
+                url=url, session_url=self.base_url, data={"agree": "Yes%2C+I+agree"}
             )
             self.data[keyword] += list(self.parser(html_page))
 
     def get_exploit_date(self, regex_item):
-        return "{0}-{1}-{2}".format(self.regex_date.search(regex_item).group(1),
-                                    self.regex_date.search(regex_item).group(2),
-                                    self.regex_date.search(regex_item).group(3))
+        return "{0}-{1}-{2}".format(
+            self.regex_date.search(regex_item).group(1),
+            self.regex_date.search(regex_item).group(2),
+            self.regex_date.search(regex_item).group(3),
+        )
