@@ -4,9 +4,7 @@ import webbrowser
 def write_html(dict_all_results):
     html = "".join(open("common/html_page/base.html", "r").readlines())
     data = __helper_write_html(dict_all_results)
-    final_html = html.format(
-        word_search=data["word_search"], list_dict_result=data["table_rows"]
-    )
+    final_html = html.format(word_search=data["word_search"], list_dict_result=data["table_rows"])
 
     with open(r"out.html", "w") as f:
         f.write(final_html)

@@ -47,9 +47,7 @@ class BaseScraper(UserDict):
         }
 
     def get_exploit_url(self, regex_item):
-        return "{0}{1}".format(
-            self.base_url, self.regex_url.search(regex_item).group(1)
-        )
+        return "{0}{1}".format(self.base_url, self.regex_url.search(regex_item).group(1))
 
     def get_exploit_date(self, regex_item):
         return self.regex_date.search(regex_item).group(1)
@@ -71,9 +69,7 @@ class PacketStorm(BaseScraper):
 class CXSecurity(BaseScraper):
     regex_item = re.compile(r'(?msi)<tr>.*?<td width="17".*?<td width="550".*?</tr>')
     regex_url = re.compile(r'(?msi)<td.*?<h6><a href="([^"]*?)"')
-    regex_date = re.compile(
-        r'(?msi)<td width="80".*?default">(\d{2})\.(\d{2})\.(\d{4})'
-    )
+    regex_date = re.compile(r'(?msi)<td width="80".*?default">(\d{2})\.(\d{2})\.(\d{4})')
     regex_name = re.compile(r'(?msi)title="([^"]*?)"')
     base_url = "https://cxsecurity.com"
     exploit_endpoint = "search/wlb/DESC/AND/{}.1999.1.1/{}/30/{}/"
@@ -99,9 +95,7 @@ class CXSecurity(BaseScraper):
 
 
 class ZeroDay(BaseScraper):
-    regex_item = re.compile(
-        r"(?msi)<div class='ExploitTableContent'.*?<div class='tips_value_big'>"
-    )
+    regex_item = re.compile(r"(?msi)<div class='ExploitTableContent'.*?<div class='tips_value_big'>")
     regex_date = re.compile(r"(?msi)href='/date.*?>(\d{2})-(\d{2})-(\d{4})")
     regex_url = re.compile(r"(?msi)href='(/exploit.*?)'")
     regex_name = re.compile(r"(?msi)href='/exploit.*?'>([^<]*?)<")

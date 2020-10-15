@@ -45,9 +45,5 @@ def show_results(keyword, exploits):
         if count_exploits > MAX_PRINT_PER_SITE:
             break
         count_exploits += 1
-        print(
-            "+ {0} | {1} | {2} ".format(
-                exploit["date"], str(exploit["name"])[0:50], exploit["url"]
-            )
-        )
+        print("+ {0} | {1} | {2} ".format(exploit["date"], str(exploit["name"])[0:50], exploit["url"]))
         print("+" + "-" * 150 + "+")

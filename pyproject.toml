@@ -16,3 +16,17 @@ pompem = "pompem.__main__:main"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 110
+target-version = ["py38"]
+
+[tool.isort]
+line_length = 110
+multi_line_output = 3
+include_trailing_comma = true
+force_grid_wrap = 0
+use_parentheses = true
+known_localfolder = "tests,pompem"
+sections = "FUTURE,STDLIB,THIRDPARTY,FIRSTPARTY,LOCALFOLDER"
+default_section = "THIRDPARTY"
