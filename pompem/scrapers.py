@@ -63,7 +63,7 @@ class PacketStorm(BaseScraper):
     regex_name = re.compile(r'href="/files/\d+?\/[^"]*?".*?title.*?>([^<]*?)<')
     base_url = "https://packetstormsecurity.com"
     exploit_endpoint = "search/files/page{}/?q={}"
-    max_page = 2
+    max_page = 1
 
 
 class CXSecurity(BaseScraper):
@@ -73,7 +73,7 @@ class CXSecurity(BaseScraper):
     regex_name = re.compile(r'(?msi)title="([^"]*?)"')
     base_url = "https://cxsecurity.com"
     exploit_endpoint = "search/wlb/DESC/AND/{}.1999.1.1/{}/30/{}/"
-    max_page = 2
+    max_page = 1
 
     async def __call__(self, keyword):
         formated_date = '{dt.year}.{dt.month}.{dt.day}'.format(dt=datetime.now())
@@ -95,7 +95,7 @@ class ZeroDay(BaseScraper):
     regex_name = re.compile(r"(?msi)href='/exploit.*?'>([^<]*?)<")
     base_url = "http://www-.0day.today"
     exploit_endpoint = "search?search_request={}"
-    max_page = 2
+    max_page = 1
 
     async def __call__(self, keyword):
         for _ in range(self.max_page):

@@ -1,8 +1,8 @@
-#!/usr/bin/python3.6
-
+import asyncio
 import optparse
-from core.exploit_finder import ExploitFinder
-from core.messages import get_help_message, get_basic_info
+
+from .exploit_finder import ExploitFinder
+from .messages import get_help_message, get_basic_info
 
 
 def main():
@@ -30,14 +30,11 @@ def main():
 
     args = parser.parse_args()[0]
 
-    if args.help:
+    if not args.help and args.keywords:
+        exploit_finder = ExploitFinder(args)
+        return asyncio.run(exploit_finder.run())
+    else:
         print(get_help_message())
-        return
-
-    if args.keywords:
-        exploit_finder = ExploitFinder()
-        exploit_finder(args)
-        return
 
     print(get_basic_info())
 
