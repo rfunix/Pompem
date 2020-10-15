@@ -44,9 +44,7 @@ def __helper_write_html(iterable_data):
                             <td><a style="color:lime;" id="url_download" href="{2}" target='_blank'>{2}</a></td>
                         </tr>
                     """.format(
-                        exploit_data["date"],
-                        str(exploit_data["name"]),
-                        exploit_data["url"],
+                        exploit_data["date"], str(exploit_data["name"]), exploit_data["url"]
                     )
         table_rows += """
                     </tbody>
@@ -72,8 +70,6 @@ def write_txt(dict_all_results):
                     for exploit_data in result:
                         f.write(
                             "{0};{1};{2}\n".format(
-                                exploit_data["date"],
-                                str(exploit_data["name"]),
-                                exploit_data["url"],
+                                exploit_data["date"], str(exploit_data["name"]), exploit_data["url"]
                             )
                         )

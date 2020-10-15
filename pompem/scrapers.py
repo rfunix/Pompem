@@ -79,10 +79,7 @@ class CXSecurity(BaseScraper):
         formated_date = "{dt.year}.{dt.month}.{dt.day}".format(dt=datetime.now())
 
         for page in range(self.max_page):
-            url = urljoin(
-                self.base_url,
-                self.exploit_endpoint.format(formated_date, page, keyword),
-            )
+            url = urljoin(self.base_url, self.exploit_endpoint.format(formated_date, page, keyword))
             html_page = await request_worker(url)
             self.data[keyword] += list(self.parser(html_page))
 
