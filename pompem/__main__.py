@@ -2,7 +2,20 @@ import asyncio
 import optparse
 
 from .exploit_finder import ExploitFinder
-from .messages import get_help_message, get_basic_info
+
+BASIC_INFO_MESSAGE = """
+           __________
+           \______   \____   _____ ______   ____   _____
+            |     ___/  _ \ /      \\____ \_/ __ \ /      \\
+            |    |  (  <_> )  Y Y  \  |_> >  ___/|  Y Y  \\
+            |____|   \____/|__|_|  /   __/ \___  >__|_|  /
+                                 \/|__|        \/      \/
+
+    Usage: pompem.py [-s/--search <keyword,keyword,keyword,...>]
+                     [--txt Write txt file                     ]
+                     [--html Write html file                   ]
+                  Get basic options and help, use: -h\--help
+              """
 
 
 def main():
@@ -14,21 +27,15 @@ def main():
 
     parser.add_option("--html", dest="html_out", action="store_true", help="Generate html output file")
 
-    parser.add_option("--update", action="store_true", dest="update", help="upgrade to latest version")
-
-    parser.add_option("-g", "--get", action="store_true", dest="get_exploit", help="Download Exploits")
-
     parser.add_option("-h", "--help", action="store_true", dest="help", help="-h")
 
-    args = parser.parse_args()[0]
+    (options, _) = parser.parse_args()
 
-    if not args.help and args.keywords:
-        exploit_finder = ExploitFinder(args)
+    if options.keywords:
+        exploit_finder = ExploitFinder(options)
         return asyncio.run(exploit_finder.run())
-    else:
-        print(get_help_message())
 
-    print(get_basic_info())
+    print(BASIC_INFO_MESSAGE)
 
 
 if __name__ == "__main__":

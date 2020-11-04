@@ -1,6 +1,7 @@
+import socket
+
 import aiohttp
 import async_timeout
-import socket
 
 TIMEOUT = 120
 

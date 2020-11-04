@@ -1,7 +1,6 @@
 import re
+from collections import UserDict, defaultdict
 from datetime import datetime
-from collections import defaultdict
-from collections import UserDict
 from urllib.parse import urljoin
 
 from .request_worker import request_worker, request_worker_keep_session
@@ -76,7 +75,7 @@ class CXSecurity(BaseScraper):
     max_page = 1
 
     async def __call__(self, keyword):
-        formated_date = "{dt.year}.{dt.month}.{dt.day}".format(dt=datetime.now())
+        formated_date = "{dt.year}.{dt.month}.{dt.day}".format(dt=datetime.utcnow())
 
         for page in range(self.max_page):
             url = urljoin(self.base_url, self.exploit_endpoint.format(formated_date, page, keyword))
