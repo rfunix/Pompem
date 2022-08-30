@@ -89,13 +89,16 @@ class CXSecurity(BaseScraper):
             self.regex_date.search(regex_item).group(3),
         )
 
+    def get_exploit_url(self, regex_item):
+        return self.regex_url.search(regex_item).group(1)
+
 
 class ZeroDay(BaseScraper):
     regex_item = re.compile(r"(?msi)<div class='ExploitTableContent'.*?<div class='tips_value_big'>")
     regex_date = re.compile(r"(?msi)href='/date.*?>(\d{2})-(\d{2})-(\d{4})")
     regex_url = re.compile(r"(?msi)href='(/exploit.*?)'")
     regex_name = re.compile(r"(?msi)href='/exploit.*?'>([^<]*?)<")
-    base_url = "http://www-.0day.today"
+    base_url = "https://0day.today/"
     exploit_endpoint = "search?search_request={}"
     max_page = 1
 

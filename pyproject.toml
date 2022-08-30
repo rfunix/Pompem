@@ -7,8 +7,10 @@ authors = ["rfunix <rafinha.unix@gmail.com>"]
 [tool.poetry.dependencies]
 python = "^3.8"
 aiohttp = "^3.6.3"
+rich = "^12.5.1"
 
 [tool.poetry.dev-dependencies]
+black = "^22.6.0"
 
 [tool.poetry.scripts]
 pompem = "pompem.__main__:main"

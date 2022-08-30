@@ -12,21 +12,13 @@ BASIC_INFO_MESSAGE = """
                                  \/|__|        \/      \/
 
     Usage: pompem.py [-s/--search <keyword,keyword,keyword,...>]
-                     [--txt Write txt file                     ]
-                     [--html Write html file                   ]
                   Get basic options and help, use: -h\--help
               """
 
 
 def main():
     parser = optparse.OptionParser(add_help_option=False)
-
     parser.add_option("-s", "--search", dest="keywords", type="string", help="text for search")
-
-    parser.add_option("--txt", dest="txt_out", action="store_true", help="Generate txt output file")
-
-    parser.add_option("--html", dest="html_out", action="store_true", help="Generate html output file")
-
     parser.add_option("-h", "--help", action="store_true", dest="help", help="-h")
 
     (options, _) = parser.parse_args()
